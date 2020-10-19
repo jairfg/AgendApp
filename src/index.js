@@ -1,10 +1,11 @@
-const express = require ('express')
-const app = express()
+const app = require('./server')
 
 
-app.get('/',(req,res) => {
-    res.send("hello word")
+
+app.listen(app.get('port'),()=> {
+    console.log('server on port ')
 })
 
-app.listen(3000)
+
+
 
