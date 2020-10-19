@@ -5,7 +5,7 @@ const path = require('path')
 const app = express()
 
 //Settings
-app.set('port',process.env.PORT || 3000)
+app.set('port',process.env.PORT || 5000)
 app.set('views',path.join(__dirname,'views'))
 
 //Middlewares
