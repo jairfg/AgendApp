@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
-const MONGODB_URI = 'mongodb//localhost/AgendApp'
+
+const {AGENDAPP_MONGODB_HOST,AGENDAPP_MONGODB_DATABASE} = process.env
+const MONGODB_URI = `mongodb//${AGENDAPP_MONGODB_HOST}//${AGENDAPP_MONGODB_DATABASE} `
 
 mongoose.connect('MONGODB_URI',{
     useUnifiedTopology:true,
