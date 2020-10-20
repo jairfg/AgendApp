@@ -7,6 +7,9 @@ const UserSchema = new Schema({
     email : {
         type:String ,required : true 
     },
+    phone : {
+        type: String , required : true 
+    },
     password : {type : String , required : true}
 },{
     timestamps : true
@@ -22,6 +25,8 @@ UserSchema.methods.matchPassword = async password => {
 }
 
 module.exports = model ('User',UserSchema)
+
+
 
 
 
