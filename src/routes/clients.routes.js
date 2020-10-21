@@ -3,7 +3,6 @@ const router = Router()
 const {renderClientForm,createClientForm,renderClients,renderEditForm,updateClient,deleteClient} = require('../controllers/clients.controller')
 
 //new client
-router.get('/client/add',renderClientForm)
 router.post('/client/add',createClientForm)
 
 //get all client

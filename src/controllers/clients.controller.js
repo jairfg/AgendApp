@@ -1,14 +1,16 @@
 const clientsController = {}
+const Client = require('../models/Client')
 
-clientsController.renderClientForm = (req,res) => {
-    res.render('clients/new-client')
+
+clientsController.createClientForm = async (req,res) => {
+    console.log(req.body)
+    const {name,email,phone,description}  = req.body
+    const newClient = new Client({name,email,phone,description})
+    await newClient.save()
 }
-
-clientsController.createClientForm = (req,res) => {
-  
-}
-
-clientsController.renderClients = (req,res) => {
+clientsController.renderClients = async (req,res) => {
+    const clients = await Client.find()
+    res.render('clients/clients',{clients})
 }
 
 clientsController.renderEditForm = (req,res) => {
