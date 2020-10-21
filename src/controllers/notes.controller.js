@@ -1,13 +1,16 @@
 const notesController = {}
+const Note = require('../models/Note')
 
 notesController.renderNoteForm = (req,res) => {
     res.render('notes/new-note')
 }
-
-notesController.createNoteForm = (req,res) => {
-    console.log(req.body)
-    res.send('new note')
+notesController.createNoteForm = async (req,res) => {
+    const {title, description} = req.body
+    const newNote = new Note({title,description})
+    await newNote.save()
+    res.send('new-note')
 }
+
 notesController.renderNotes = (req,res) => {
     res.send('render all notes')
 }
@@ -20,7 +23,7 @@ notesController.updateNote = (req,res) => {
     res.send('update note')
 }
 
-notesController.deletenote = (req,res) => {
+notesController.deleteNote = (req,res) => {
     res.send('delete note')
 }
 

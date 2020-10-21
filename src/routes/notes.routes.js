@@ -1,6 +1,6 @@
 const {Router} = require('express')
 const router = Router()
-const {renderNoteForm,createNoteForm,renderNotes,renderEditForm,updateNote,deletenote} = require('../controllers/notes.controller')
+const {renderNoteForm,createNoteForm,renderNotes,renderEditForm,updateNote,deleteNote} = require('../controllers/notes.controller')
 
 //new note
 router.get('/notes/add',renderNoteForm)
@@ -14,7 +14,7 @@ router.get('/notes/edit/:id',renderEditForm)
 router.put('/notes/edit/:id',updateNote)
 
 //delete 
-router.delete('/notes/delete/:id',deletenote)
+router.delete('/notes/delete/:id',deleteNote)
 
 
 

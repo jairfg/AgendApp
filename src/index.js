@@ -1,6 +1,8 @@
 const app = require('./server')
+const dotenv = require('dotenv')
+dotenv.config()
 require('./databases')
-require('dotenv').config()
+
 
 
 app.listen(app.get('port'),()=> {
