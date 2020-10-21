@@ -11,10 +11,10 @@ notesController.createNoteForm = async (req,res) => {
     res.send('new-note')
 }
 
-notesController.renderNotes = (req,res) => {
-    res.send('render all notes')
+notesController.renderNotes = async (req,res) => {
+    const notes = await Note.find()
+    res.render('notes/all-notes',{notes})
 }
-
 notesController.renderEditForm = (req,res) => {
     res.send('render edit form')
 }
