@@ -27,6 +27,9 @@
                         <th scope="col">Nombre</th>
                         <th scope="col">Email</th>
                         <th scope="col">Telefono</th>
+                        <th scope="col"></th>
+                             <th scope="col"></th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -36,6 +39,17 @@
                         <td>{{name}}</td>
                         <td>{{email}}</td>
                         <td>{{phone}}</td>
+                        <td> 
+                         <a href="/clients/edit/{{_id}}"><i class="fas fa-pencil-alt"></i>  </a>
+                        </td>
+
+                        <td>
+                            <form action="/clients/delete/{{_id}}" method="POST">
+                              <button type="submit" class="btn btn-danger btn-block btn-sm">
+                                  Eliminar
+                              </button>
+                          </form>
+                        </td>
                         </tr>
                      {{/each}}
                     </tbody>
