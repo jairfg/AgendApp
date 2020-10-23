@@ -29,31 +29,36 @@
                         <th scope="col">Telefono</th>
                         <th scope="col"></th>
                              <th scope="col"></th>
-
                         </tr>
                     </thead>
                     <tbody>
-                      {{#each clients}}
+                      {{#clients}}
                         <tr>
                         <th scope="row">1</th>
                         <td>{{name}}</td>
                         <td>{{email}}</td>
                         <td>{{phone}}</td>
                         <td> 
-                         <a href="/clients/edit/{{_id}}"><i class="fas fa-pencil-alt"></i>  </a>
+                         <a href="/client/edit/{{_id}}"><i class="fas fa-pencil-alt"></i>  </a>
                         </td>
 
                         <td>
-                            <form action="/clients/delete/{{_id}}" method="POST">
-                              <button type="submit" class="btn btn-danger btn-block btn-sm">
-                                  Eliminar
+                          <form   action="/clients/delete/{{_id}}?_method=DELETE" method="POST">
+                             <button onclick="return confirmacion()"  type="submit" class="btn btn-danger ">
+                                Eliminar
                               </button>
                           </form>
-                        </td>
+                        </td> 
                         </tr>
-                     {{/each}}
+                     {{/clients}}
                     </tbody>
             </table>
     </div>
   </div>
 </div>
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->

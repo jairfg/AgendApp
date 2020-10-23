@@ -16,12 +16,17 @@ clientsController.renderClients = async (req,res) => {
 }
 
 clientsController.renderEditForm = (req,res) => {
+    console.log(req.params) 
+    res.render('clients/client')
 }
 
 clientsController.updateClient = (req,res) => {
 }
 
-clientsController.deleteClient = (req,res) => {
+clientsController.deleteClient = async (req,res) => {
+    const {id} = req.params
+    const client = await Client.findByIdAndDelete(id)
+    res.redirect('/clients')
 }
 
 

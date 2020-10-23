@@ -9,8 +9,8 @@ router.post('/client/add',createClientForm)
 router.get('/clients', renderClients)
 
 //Edit client
-router.get('/clients/edit/:id',renderEditForm)
-router.put('/clients/edit/:id',updateClient)
+router.get('/client/edit/:id',renderEditForm)
+router.put('/client/edit/:id',updateClient)
 
 //delete 
 router.delete('/clients/delete/:id',deleteClient)
