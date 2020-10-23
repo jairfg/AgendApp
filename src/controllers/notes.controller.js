@@ -20,11 +20,14 @@ notesController.renderEditForm = (req,res) => {
 }
 
 notesController.updateNote = (req,res) => {
-    res.send('update note')
+    
 }
 
-notesController.deleteNote = (req,res) => {
-    res.send('delete note')
+notesController.deleteNote = async (req,res) => {
+    const {id} = req.params
+    const note = await Note.findByIdAndDelete(id)
+    res.redirect('/notes')
+
 }
 
 
