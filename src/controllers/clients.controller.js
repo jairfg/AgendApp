@@ -15,9 +15,11 @@ clientsController.renderClients = async (req,res) => {
     
 }
 
-clientsController.renderEditForm = (req,res) => {
-    console.log(req.params) 
-    res.render('clients/client')
+clientsController.renderEditForm = async (req,res) => {
+    const {id} = req.params
+    const client = await Client.findById(id)
+    console.log(client)
+    res.render('clients/client',{client})
 }
 
 clientsController.updateClient = (req,res) => {
