@@ -39,11 +39,11 @@
                         <td>{{email}}</td>
                         <td>{{phone}}</td>
                         <td> 
-                         <a href="/client/edit/{{_id}}"><i class="fas fa-pencil-alt"></i>  </a>
+                         <a href="/client/edit/{{id}}"><i class="fas fa-pencil-alt"></i>  </a>
                         </td>
 
                         <td>
-                          <form   action="/clients/delete/{{_id}}?_method=DELETE" method="POST">
+                          <form   action="/clients/delete/{{id}}?_method=DELETE" method="POST">
                              <button onclick="return confirmacion()"  type="submit" class="btn btn-danger ">
                                 Eliminar
                               </button>

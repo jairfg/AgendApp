@@ -22,7 +22,11 @@ clientsController.renderEditForm = async (req,res) => {
     res.render('clients/client',{client})
 }
 
-clientsController.updateClient = (req,res) => {
+clientsController.updateClient = async  (req,res) => {
+    console.log(req.body)
+    const {name,phone,email,description,nro_identidad} =  req.body
+    await Client.findByIdAndUpdate(req.params.id, {name,phone,email,description,nro_identidad})
+    res.redirect('/clients')
 }
 
 clientsController.deleteClient = async (req,res) => {
