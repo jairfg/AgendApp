@@ -1,16 +1,11 @@
 const usersController = {}
 
-usersController.renderSignupForm = (req,res)=> {
-    res.render('users/signup')
-}
 
 usersController.signup = (req,res)=> {
-    res.send('signup')
+    console.log(req.body)
 }
 
-usersController.renderSigninForm = (req,res)=> {
-    res.render('users/signin')
-}
+
 
 usersController.signin = (req,res) => {
     res.send('signin')
