@@ -1,11 +1,75 @@
-<div class="jumbotron mt-4">
-    <div class="display-4">
+<div class="container jumbotron mt-4">
+  <div class="row">
+    <div class="col-sm">
+      <div class="display-4">
         AgendApp
     </div>
     <p class="lead"> 
         Registro de clientes, agendar reuniones y recordatorios,
     </p>
-    <hr class="my-4">
-    <a href="/register" class="btn btn-primary">Registrate! </a>    
-    
+    </div>
+    <div class="col-sm">
+         <div class="card">
+            <div class="card-header">
+                Inicia Sesión
+            </div>
+            <div class="card-body">
+                <form action="/users/signin" method="POST">
+            
+                       <div class="form-group">
+                        <input type="email" class="form-control" name="email" placeholder="Correo electrónico">
+                    </div>
+                       <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="Contraseña">
+                    </div>
+               
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Iniciar Sesión
+                    </button>
+                </form>
+            </div>
+            <div class="card-footer text-center">
+                <button class="btn btn-success  " type="button" data-toggle="modal" data-target="#exampleModal">
+                    Crear una cuenta nueva
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">  Registro de cuenta</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                            <form action="/users/signup" method="POST">
+                                <div class="modal-body">
+                                        <div class="form-group">
+                                            <img src="/img/default.png"  class="rounded-circle mx-auto d-block m-4" alt="">    
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="name" placeholder="Nombre completo">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="email" placeholder="Correo electrónico">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" name="password" placeholder="Contraseña">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" name="confir_password" placeholder="Repita la contraseña">
+                                        </div>    
+                                </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                        <button  type="submit" class="btn btn-primary ">Registrar</button>
+                                    </div>
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+  </div>
 </div>

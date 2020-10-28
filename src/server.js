@@ -26,18 +26,24 @@ app.set('view engine','.hbs')
 app.use(morgan('dev'))
 app.use(express.urlencoded({extended : false}))
 app.use(methodOverride('_method'))
+app.use(session({
+    secret : 'secret',
+    resave : true,
+    saveUninitialized : true
+}))
+app.use(flash())
 
-
-
-
-
-// global variables
-
+// global variable
+app.use((req,res,next)=> {
+    res.locals.success_msg = req.flash('success_msg')
+    next()
+})
 
 //routes
 app.use(require('./routes/index.routes'))
 app.use(require('./routes/notes.routes'))
 app.use(require('./routes/clients.routes'))
+app.use(require('./routes/users.routes'))
 
 
 
