@@ -44,7 +44,7 @@
                             <form action="/users/signup" method="POST">
                                 <div class="modal-body">
                                         <div class="form-group">
-                                            <img src="img/default.png" class="mx-auto d-block m-4 logo" alt="">
+                                            <img src="/img/default.png" class="mx-auto d-block m-4 logo" alt="">
                                                <div class="custom-file">
                                                 <input type="file" name="imagen" class="custom-file-input" id="inputGroupFile"
                                                     aria-describedby="inputGroupFileAddon"   />
@@ -52,16 +52,16 @@
                                              </div>                             
                                         </div>            
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="name" placeholder="Nombre completo">
+                                            <input type="text" class="form-control" name="name" placeholder="Nombre completo" value="{{name}}">
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" class="form-control" name="email" placeholder="Correo electrónico">
+                                            <input type="email" class="form-control" name="email" placeholder="Correo electrónico" value="{{email}}">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control" name="password" placeholder="Contraseña">
+                                            <input type="password" class="form-control" name="password" placeholder="Contraseña" value="{{password}}">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control" name="confir_password" placeholder="Repita la contraseña">
+                                            <input type="password" class="form-control" name="confirm_password" placeholder="Repita la contraseña" value="{{confirm_password}}" >
                                         </div>    
                                 </div>
                                     <div class="modal-footer">
