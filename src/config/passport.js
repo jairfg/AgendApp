@@ -3,42 +3,30 @@ const LocalStrategy  = require('passport-local').Strategy;
 const User = require('../models/User')
 
 
+passport.serializeUser((user, done) => {
+    done(null, user.id);
+});
+
+passport.deserializeUser(async (id, done) => {
+    const user = await User.findById(id);
+    done(null, user);
+});
+
+
 passport.use( new LocalStrategy({
-    usernameField : 'email',
-    // passwordField : 'password'
-},async (email,password,done) => {
-    //Match Email's user
-    const user = await User.findOne({email})
-    if(!user){
-        return done(null,false,{message : 'No se ha encontrado el usuario'})
-    }else {
-        //Match password User
-        const match = await user.matchPassword(password)
-        if(match){
-            return done(null, user)
-        }else {
-            return done(null, false, { message : 'Contraseña incorrecta '})
-        }
+    usernameField: 'email',
+    passwordField: 'password',
+    passReqToCallback: true
+}, async (req, email, password, done) => {
+    const user = await User.findOne({email: email});
+    if(!user) {
+        return done(null, false, {message : 'No se ha encontrado el usuario'});
     }
-} ) )
-
-passport.serializeUser((user,done) => {
-    done(null, user.id)
-})
-passport.deserializeUser((id, done) => {
-    User.findById(id, (err,user) => {
-        done(err,user)
-    })
-})
-
-
-
-
-
-
-
-
-
+    if(!user.comparePassword(password)) {
+        return done(null, false, { message : 'Contraseña incorrecta '});
+    }
+    return done(null, user );
+}));
 
 
 

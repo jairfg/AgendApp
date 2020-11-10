@@ -13,16 +13,15 @@ const UserSchema = new Schema({
 },{
     timestamps : true
 })
-//metodo para cifrar
-UserSchema.methods.encryptPassword = async password => {
-    const salt = await bcrypt.genSalt(10)
-    return await bcrypt.hash(password,salt)
-}
-//compara contraseña
-UserSchema.methods.matchPassword = async password => {
-    console.log(this.password)
-    return await bcrypt.compare(password , this.password)
-}
+
+UserSchema.methods.encryptPassword = (password) => {
+    return bcrypt.hashSync(password, bcrypt.genSaltSync(10));
+};
+
+UserSchema.methods.comparePassword= function (password) {
+    return bcrypt.compareSync(password, this.password);
+};
+
 
 module.exports = model ('User',UserSchema)
 

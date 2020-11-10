@@ -37,12 +37,13 @@ usersController.signup = async (req,res)=> {
 
 usersController.signin = passport.authenticate("local" , {
     failureRedirect : '/',
-    successRedirect : '/',
+    successRedirect : '/notes',
     failureFlash: true
 })
 
 usersController.logout = (req,res) => {
-    res.send('logout')
+    req.logout();
+    res.redirect('/');
 }
 
 module.exports = usersController
