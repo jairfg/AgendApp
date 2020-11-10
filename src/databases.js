@@ -4,6 +4,7 @@ const MONGODB_URI = `mongodb://${AGENDAPP_MONGODB_HOST}/${AGENDAPP_MONGODB_DATAB
 mongoose.connect(MONGODB_URI, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
+    useCreateIndex : true
     })
     .then(() => console.log('MongoDB Connected...'))
     .catch((err) => console.log(err))

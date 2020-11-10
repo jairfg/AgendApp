@@ -20,7 +20,8 @@ UserSchema.methods.encryptPassword = async password => {
 }
 //compara contraseña
 UserSchema.methods.matchPassword = async password => {
-    return await bcrypt.compare(password ,UserSchema.password )
+    console.log(this.password)
+    return await bcrypt.compare(password , this.password)
 }
 
 module.exports = model ('User',UserSchema)

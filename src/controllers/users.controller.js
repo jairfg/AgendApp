@@ -1,16 +1,18 @@
 const usersController = {}
 const User = require('../models/User')
+const passport = require('passport')
 
 usersController.signup = async (req,res)=> {
     const errors = []
     const {name,email,password,confirm_password} = req.body
-    if(password != confirm_password){
+    if(password !== confirm_password){
         errors.push({text:'Las contraseñas no coinciden'})
     }
     else if(password.length < 6){
         errors.push({text:"Las contraseñas deben ser mayores a 6 caracteres"})
     }
-    else if (errors.length > 0){
+    if (errors.length > 0){
+        console.log(errors)
         res.render('index',{errors,
             name,
             email,
@@ -33,11 +35,11 @@ usersController.signup = async (req,res)=> {
     }
 }
 
-
-
-usersController.signin = (req,res) => {
-    res.send('signin')
-}
+usersController.signin = passport.authenticate("local" , {
+    failureRedirect : '/',
+    successRedirect : '/',
+    failureFlash: true
+})
 
 usersController.logout = (req,res) => {
     res.send('logout')
