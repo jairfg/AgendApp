@@ -20,16 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="388f343c-e607-449a-aba9-f6909c49d9e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/helpers/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/clients/list-clients.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/passport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/clients.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/clients.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/notes.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/notes.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/users.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/users.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Note.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Note.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/notes.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/notes.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/partials/errors.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/partials/errors.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Client.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/clients.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/clients.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/partials/navigation.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/partials/navigation.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +76,8 @@
       <workItem from="1604808628194" duration="5473000" />
       <workItem from="1604842089966" duration="9044000" />
       <workItem from="1604979952743" duration="35000" />
-      <workItem from="1605021306757" duration="6907000" />
+      <workItem from="1605021306757" duration="7099000" />
+      <workItem from="1605037397003" duration="3342000" />
     </task>
     <servers />
   </component>

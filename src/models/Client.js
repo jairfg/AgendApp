@@ -13,6 +13,9 @@ const ClientSchema  = new Schema({
     },
     nro_identidad:{
         type:String
+    }, user: {
+        type: String,
+        required : true
     }
 },{
     timestamps : true
