@@ -1,7 +1,8 @@
  <form method="POST" action="/client/add">
             <div class="row">
             <div class="col-md-4 text-center">
-                <img src="/img/default.png" alt="..." class="img-thumbnail">
+                <input type="file"  id="file-field"  onchange="previewImage(event)" class="form-control" >
+                <img src="/img/default.png"  id="image-field" class="img-thumbnail">
             </div>
             <div class="col-md-8">
                 <div class="form-row">
