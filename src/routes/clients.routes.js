@@ -3,6 +3,7 @@ const router = Router()
 const {renderClientForm,createClientForm,renderClients,renderEditForm,updateClient,deleteClient} = require('../controllers/clients.controller')
 const {isAuthenticated} = require('../helpers/auth')
 //new client
+router.get('/client/add',isAuthenticated,renderClientForm)
 router.post('/client/add',isAuthenticated , createClientForm)
 
 //get all client

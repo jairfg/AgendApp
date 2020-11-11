@@ -1,11 +1,13 @@
 const clientsController = {}
 const Client = require('../models/Client')
-
+clientsController.renderClientForm = async (req,res) => {
+    res.render('clients/new-client')
+}
 
 clientsController.createClientForm = async (req,res) => {
     console.log(req.body)
-    const {name,email,phone,description}  = req.body
-    const newClient = new Client({name,email,phone,description})
+    const {name,email,phone,description,nroidentidad}  = req.body
+    const newClient = new Client({name,email,phone,description,nroidentidad})
     newClient.user = req.user.id
     await newClient.save()
     req.flash('success_msg','Cliente agregado')
@@ -13,7 +15,7 @@ clientsController.createClientForm = async (req,res) => {
 }
 clientsController.renderClients = async (req,res) => {
     const clients = await Client.find({user : req.user.id}).sort({createdAt: 'desc'})
-    res.render('clients/clients',{clients})
+    res.render('clients/all-clients',{clients})
 }
 
 clientsController.renderEditForm = async (req,res) => {
@@ -23,7 +25,7 @@ clientsController.renderEditForm = async (req,res) => {
         return res.redirect('/clients')
     }
     console.log(client)
-    res.render('clients/client',{client})
+    res.render('clients/edit-client',{client})
 }
 
 clientsController.updateClient = async  (req,res) => {

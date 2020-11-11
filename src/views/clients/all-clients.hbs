@@ -1,0 +1,47 @@
+<div class="row m-4">
+    <div class="col-6">
+            <input class="form-control" type="text" placeholder="Buscar Cliente" aria-label="Search">
+    </div>
+    <div class="col-6">
+        <a href="/client/add"  class="btn btn-primary"  > Agregar un nuevo cliente </a>
+
+    </div>
+</div>
+
+<div>
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">DNI</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telefono</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#clients}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{nroidentidad}}</td>
+                <td>{{email}}</td>
+                <td>{{phone}}</td>
+                <td>
+                    <a href="/client/edit/{{id}}"><i class="fas fa-pencil-alt"></i>  </a>
+                </td>
+
+                <td>
+                    <form   action="/clients/delete/{{id}}?_method=DELETE" method="POST">
+                        <button onclick="return confirmacion()"  type="submit" class="btn btn-danger ">
+                            Eliminar
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        {{/clients}}
+        </tbody>
+    </table>
+
+
+</div>

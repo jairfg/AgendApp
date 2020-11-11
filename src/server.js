@@ -2,6 +2,7 @@ const express = require ('express')
 const path = require('path')
 const exphbs = require('express-handlebars')
 const morgan = require('morgan')
+const multer = require('multer');
 const methodOverride = require('method-override')
 const flash = require('connect-flash')
 const session = require('express-session')
@@ -36,6 +37,9 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash())
+app.use(multer({ dest: path.join(__dirname, '/public/upload/temp') }).single('imagen'));
+// M. para recibir imagenes desde el formulario
+app.use(express.urlencoded({ extended: false }));
 
 // global variable
 app.use((req,res,next)=> {
@@ -60,6 +64,3 @@ app.use(express.static(path.join(__dirname,'public')))
 
 
 module.exports = app
-
-
-// killers process node : killall -9 node

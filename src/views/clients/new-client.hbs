@@ -1,0 +1,39 @@
+ <form method="POST" action="/client/add">
+            <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="/img/default.png" alt="..." class="img-thumbnail">
+            </div>
+            <div class="col-md-8">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Nombre Completo</label>
+                        <input type="text"  name="name" class="form-control" >
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label >DNI</label>
+                        <input type="text" name="nroidentidad" class="form-control" >
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label >Teléfono</label>
+                        <input type="text" name="phone" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label >Email</label>
+                        <input type="text" name="email" class="form-control" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label >Descripción (opcional )</label>
+                    <textarea  class="form-control" name="description" rows="3"></textarea>
+                </div>
+                <div class="form-group text-center">
+                    <button class="btn btn-primary" type="submit">
+                        Guardar
+                    </button>
+                </div>
+
+            </div>
+    </div>
+        </form>

@@ -6,13 +6,13 @@ const ClientSchema  = new Schema({
         type: String , required : true 
     },
     email : {
-        type:String 
+        type:String , required : true
     },
     description : {
         type:String 
     },
-    nro_identidad:{
-        type:String
+    nroidentidad:{
+        type:String , required : true
     }, user: {
         type: String,
         required : true
