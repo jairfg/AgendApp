@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="388f343c-e607-449a-aba9-f6909c49d9e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/clients/new-client.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/clients/new-client.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +55,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -72,6 +72,7 @@
       <workItem from="1604979952743" duration="35000" />
       <workItem from="1605021306757" duration="7099000" />
       <workItem from="1605037397003" duration="21975000" />
+      <workItem from="1605806384725" duration="3540000" />
     </task>
     <servers />
   </component>
@@ -91,10 +92,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="996" y="304" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604809977701">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="996" y="335" width="587" height="424" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605806514861">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="996" y="304" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604809977701" />
+    <state x="996" y="335" width="587" height="424" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1605806514861" />
     <state width="1893" height="266" key="GridCell.Tab.0.bottom" timestamp="1604803153432">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -111,9 +113,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1893" height="266" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604803153431" />
-    <state x="577" y="75" key="SettingsEditor" timestamp="1604872168278">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="577" y="103" width="1037" height="737" key="SettingsEditor" timestamp="1605806621901">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="577" y="75" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604872168278" />
+    <state x="577" y="103" width="1037" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1605806621901" />
   </component>
 </project>

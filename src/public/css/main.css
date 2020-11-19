@@ -8,3 +8,25 @@ a, a:hover {
     color: black;
 
 }
+
+.upload-image input{
+    display: block !important;
+    width: 158px !important;
+    height: 45px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+
+}
+.upload-image {
+    cursor:pointer;
+    width: 158px;
+    height: 45px;
+    overflow:hidden;
+    position:relative;
+    display:inline-block;
+    /*background-color:#fff;*/
+    background-repeat: no-repeat;
+    background-image:
+            url('http://icons.iconarchive.com/icons/martz90/circle/512/camera-icon.png');
+    background-size:20px 20px;
+}
