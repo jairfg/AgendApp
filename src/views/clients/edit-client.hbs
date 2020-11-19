@@ -1,10 +1,11 @@
-<form action="/client/edit/{{client.id}}?_method=PUT" method="POST">
+<form action="/client/edit/{{client.id}}?_method=PUT" method="POST" enctype="multipart/form-data">
 
     <div class="row">
         <div class="col-md-4 text-center">
             <h3> {{client.name}}</h3>
-
-            <img src="/img/default.png" alt="..." class="img-thumbnail">
+            <input type="file" name="imagen" class="custom-file-input" id="inputGroupFile" onchange="previewImage(event)"  />
+            <label  class="custom-file-label" for="inputGroupFile">Edita foto de perfil</label>
+            <img src="/upload/{{client.nombreArchivo}}" id="image-field" alt="foto perfil" class="img-thumbnail">
             <p> Registro :  {{client.createdAt}} </p>
             <p> Ultima actualización : {{tiempo client.updatedAt}}</p>
         </div>

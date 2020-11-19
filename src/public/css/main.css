@@ -1,6 +1,6 @@
-body {
-    background-color: #74c69d;
-}
+@import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+
+
 
 a, a:hover {
     text-decoration: none;
@@ -9,24 +9,14 @@ a, a:hover {
 
 }
 
-.upload-image input{
-    display: block !important;
-    width: 158px !important;
-    height: 45px !important;
-    opacity: 0 !important;
-    overflow: hidden !important;
-
+.fabutton {
+    background: none;
+    padding: 0px;
+    border: none;
 }
-.upload-image {
-    cursor:pointer;
-    width: 158px;
-    height: 45px;
-    overflow:hidden;
-    position:relative;
-    display:inline-block;
-    /*background-color:#fff;*/
-    background-repeat: no-repeat;
-    background-image:
-            url('http://icons.iconarchive.com/icons/martz90/circle/512/camera-icon.png');
-    background-size:20px 20px;
+.note {
+    font:18px 'Gloria Hallelujah', cursive;
+    border:0;
+    background: linear-gradient(#F9EFAF, #F7E98D);
+
 }

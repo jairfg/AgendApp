@@ -16,6 +16,10 @@ const ClientSchema  = new Schema({
     }, user: {
         type: String,
         required : true
+    },
+    nombreArchivo: {
+        type:String,
+        required: true
     }
 },{
     timestamps : true
