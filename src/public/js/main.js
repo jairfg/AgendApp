@@ -1,4 +1,13 @@
 
+window.onload = () => {
+    const alert = document.querySelector( '[role = "alert"]')
+    if(alert) {
+        setTimeout(()=> {
+            alert.remove()
+        }, 3000)
+    }
+}
+
 function confirmacion(){
     let opcion = confirm("Estas seguro que quieres eliminar?")
     if(opcion){

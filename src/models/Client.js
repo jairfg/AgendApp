@@ -19,7 +19,6 @@ const ClientSchema  = new Schema({
     },
     nombreArchivo: {
         type:String,
-        required: true
     }
 },{
     timestamps : true
