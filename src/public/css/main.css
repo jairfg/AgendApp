@@ -20,3 +20,7 @@ a, a:hover {
     background: linear-gradient(#F9EFAF, #F7E98D);
 
 }
+
+.card-footer p{
+    font-size: 14px;
+}

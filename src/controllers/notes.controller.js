@@ -9,7 +9,6 @@ notesController.createNoteForm = async (req,res) => {
     const {title, description} = req.body
     const newNote = new Note({title,description})
     newNote.user = req.user.id
-    console.log(newNote)
     await newNote.save()
     req.flash('success_msg','Nota agregada')
     res.redirect('/notes')

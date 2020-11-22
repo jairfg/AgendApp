@@ -3,8 +3,8 @@ const helpers = {}
 moment.locale('es');
 
 
-helpers.tiempo = createdAt => {
-   return moment(createdAt).startOf('minute').fromNow()
+helpers.time = createdAt => {
+   return moment(createdAt).format('MMMM D YYYY, h:mm a')
 }
 
 

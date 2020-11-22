@@ -12,12 +12,11 @@ clientsController.renderClientForm = async (req,res) => {
 clientsController.createClientForm = (req,res) => {
     const saveClient = async () => {
         const imgUrl = aleatorio()
-        const imagenes = await Client.find({nombreArchivo : imgUrl})
+        const imagenes = await Client.find({nombreArchivo : /^imgUrl/ })
         if(imagenes.length>0){
             saveClient()
         }else{
             const direccion = req.file.path;
-            console.log(req.file.path)
             const extension = path.extname(req.file.originalname).toLowerCase()
             const direccionFinal = path.resolve(`src/public/upload/${imgUrl}${extension}`)
             if(extension === '.jpg' || extension === '.png' || extension === '.jpeg' || extension === '.gif') {
@@ -29,6 +28,7 @@ clientsController.createClientForm = (req,res) => {
                 newClient.user = req.user.id
                 await newClient.save()
                 req.flash('success_msg','Cliente agregado')
+
                 res.redirect('/clients')
             }else{
                 //eliminando archivo que no es imagen
@@ -58,32 +58,22 @@ clientsController.renderEditForm = async (req,res) => {
 }
 
 clientsController.updateClient = async  (req,res) => {
-    const saveClient = async () => {
-        const imgUrl = aleatorio()
-        const imagenes = await Client.find({nombreArchivo : imgUrl})
-        if(imagenes.length>0){
-            saveClient()
-        }else{
-            const direccion = req.file.path;
-            console.log(req.file.path)
-            const extension = path.extname(req.file.originalname).toLowerCase()
-            const direccionFinal = path.resolve(`src/public/upload/${imgUrl}${extension}`)
-            if(extension === '.jpg' || extension === '.png' || extension === '.jpeg' || extension === '.gif') {
-                //moviendo imagen a la direccion final
-                await fs.rename(direccion,direccionFinal)
-                const {name,email,phone,description,nroidentidad }  = req.body
-                const nombreArchivo = imgUrl + extension;
-                await Client.findByIdAndUpdate(req.params.id, {name,phone,email,description,nroidentidad,nombreArchivo})
-                req.flash('success_msg','Cliente actualizado correctamente')
-                res.redirect('/clients')
-            }else{
-                //eliminando archivo que no es imagen
-                await fs.unlink(direccion)
-                res.status(500).json({error : "solo estan permitidas imagenes"})
-            }
-        }
+    const {id} = req.params
+    const cliente = await Client.findById(id)
+    const {nombreArchivo} = cliente
+    const direccion = req.file.path;
+    const extension = path.extname(req.file.originalname).toLowerCase()
+    const direccionFinal = path.resolve(`src/public/upload/${nombreArchivo}`)
+    if(extension === '.jpg' || extension === '.png' || extension === '.jpeg' || extension === '.gif') {
+        await fs.rename(direccion,direccionFinal)
+        const {name,email,phone,description,nroidentidad }  = req.body
+        await Client.findByIdAndUpdate(req.params.id, {name,phone,email,description,nroidentidad,nombreArchivo})
+        req.flash('success_msg','Cliente actualizado correctamente')
+        res.redirect('/clients')
+    }else{
+        await fs.unlink(direccion)
+        res.status(500).json({error : "solo estan permitidas imagenes"})
     }
-    saveClient()
 }
 
 clientsController.deleteClient = async (req,res) => {
