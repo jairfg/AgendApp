@@ -5,6 +5,13 @@ const AppointmentSchema  = new Schema({
         type: String,
         required : true
     },
+    comments : {
+        type:String
+    },
+    date : {
+      type: Date,
+      required: true
+    },
     client : {
         type:String ,
         required : true
