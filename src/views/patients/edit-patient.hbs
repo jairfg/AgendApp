@@ -1,11 +1,11 @@
-<form action="/client/edit/{{client.id}}?_method=PUT" method="POST" enctype="multipart/form-data">
+<form action="/patient/edit/{{patient.id}}?_method=PUT" method="POST" enctype="multipart/form-data">
 
     <div class="row">
         <div class="col-md-4 ">
-            <h3> {{client.name}}</h3>
-            <img src="/upload/{{client.nombreArchivo}}" id="image-field" alt="foto perfil" class="img-thumbnail">
-            <p>Registro :{{time client.createdAt}} </p>
-            <p>Ultima actualización :{{time client.updatedAt}}</p>
+            <h3> {{patient.name}}</h3>
+            <img src="/upload/{{patient.nombreArchivo}}" id="image-field" alt="foto perfil" class="img-thumbnail">
+            <p>Registro :{{time patient.createdAt}} </p>
+            <p>Ultima actualización :{{time patient.updatedAt}}</p>
             <input type="file" name="imagen" class="custom-file-input" id="inputGroupFile" onchange="previewImage(event)"  />
             <label  class="custom-file-label" for="inputGroupFile">Edita foto de perfil</label>
 
@@ -15,26 +15,26 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label>Nombre Completo</label>
-                    <input type="text"  name="name" class="form-control" value="{{client.name}}" >
+                    <input type="text"  name="name" class="form-control" value="{{patient.name}}" >
                 </div>
                 <div class="form-group col-md-6">
                     <label >DNI</label>
-                    <input type="text" name="nroidentidad" class="form-control" value="{{client.nroidentidad}}" >
+                    <input type="text" name="nroidentidad" class="form-control" value="{{patient.nroidentidad}}" >
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label >Teléfono</label>
-                    <input type="text" name="phone" class="form-control" value="{{client.phone}}">
+                    <input type="text" name="phone" class="form-control" value="{{patient.phone}}">
                 </div>
                 <div class="form-group col-md-6">
                     <label >Email</label>
-                    <input type="text" name="email" class="form-control" value="{{client.email}}" >
+                    <input type="text" name="email" class="form-control" value="{{patient.email}}" >
                 </div>
             </div>
             <div class="form-group">
                 <label >Descripción (opcional )</label>
-                <textarea  class="form-control" name="description"  rows="3"> {{client.description}} </textarea>
+                <textarea  class="form-control" name="description"  rows="3"> {{patient.description}} </textarea>
             </div>
             <div class="form-group text-center">
                 <button class="btn btn-primary" type="submit">

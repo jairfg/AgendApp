@@ -1,7 +1,7 @@
 {
   "name": "app",
   "version": "1.0.0",
-  "description": "",
+  "description": "registro de clientes, agendar citas y recordatorios. (Express Mongodb Handlebars)",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
@@ -31,5 +31,13 @@
     "handlebars": "^4.5.0",
     "nodemon": "^2.0.5",
     "npm-check-updates": "^9.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JairKevinFG/AgendApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JairKevinFG/AgendApp/issues"
+  },
+  "homepage": "https://github.com/JairKevinFG/AgendApp#readme"
 }

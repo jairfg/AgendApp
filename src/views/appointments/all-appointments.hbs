@@ -1,0 +1,55 @@
+<div id="contenido" class="row">
+    <div class="col-md-6 agregar-cita">
+        <form id="nueva-cita" method="POST" action="/appointment/add">
+            <h2 class="mb-4">Agendar cita</h2>
+            <div class="form-group row">
+                <label for = "paciente" class="col-sm-4 col-lg-4 col-form-label" >Paciente</label>
+                <select class="form-control col-sm-8 col-lg-8" id="patient" name ="patient">
+                    {{#patients}}
+                        <option>{{name}}</option>
+                    {{/patients}}
+                </select>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-lg-4 col-form-label">Fecha:</label>
+                <div class="col-sm-8 col-lg-8">
+                    <input type="date" id="date" name="date" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-lg-4 col-form-label">Hora:</label>
+                <div class="col-sm-8 col-lg-8">
+                    <input type="time" id="time" name="time" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-lg-4 col-form-label">Descripción:</label>
+                <div class="col-sm-8 col-lg-8">
+                    <textarea id="description" name="description" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success w-100 d-block">Crear Cita</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <h2 id="administra" class="mb-4">Administra tus Citas</h2>
+        <ul id="citas" class="list-group lista-citas">
+            {{#appointments}}
+                <div  class="cita p-3" data-id="{{id}}">
+                    <h2 class="card-title font-weight-bolder">{{patient}}</h2>
+                    <p class=""><span class="font-weight-bolder">Fecha: </span> {{date}}</p>
+                    <p class=""><span class="font-weight-bolder">Hora: </span> {{time}}</p>
+                    <p class=""><span class="font-weight-bolder">Descripción: </span> {{description}}</p>
+                    <form action="/appointments/delete/{{_id}}?_method=DELETE" method="POST">
+                        <button type="submit" class="btn btn-danger mr-2">Eliminar <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> </button>
+                    </form>
+                        <button class="btn btn-info">Editar <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg> </button>
+                </div>
+            {{/appointments}}
+        </ul>
+    </div>
+</div> <!--.row-->

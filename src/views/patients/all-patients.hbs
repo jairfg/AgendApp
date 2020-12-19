@@ -1,9 +1,9 @@
 <div class="row m-4">
     <div class="col-6">
-            <input class="form-control" type="text" placeholder="Buscar Cliente" aria-label="Search">
+            <input class="form-control" type="text" placeholder="Buscar Paciente" aria-label="Search">
     </div>
     <div class="col-6">
-        <a href="/client/add"  class="btn btn-primary"  > Agregar un nuevo cliente </a>
+        <a href="/patient/add"  class="btn btn-primary"  > Agregar un nuevo paciente </a>
 
     </div>
 </div>
@@ -21,25 +21,25 @@
         </tr>
         </thead>
         <tbody>
-        {{#clients}}
+        {{#patients}}
             <tr>
                 <td>{{name}}</td>
                 <td>{{nroidentidad}}</td>
                 <td>{{email}}</td>
                 <td>{{phone}}</td>
                 <td>
-                    <a href="/client/edit/{{id}}"><i class="fas fa-pencil-alt"></i>  </a>
+                    <a href="/patient/edit/{{id}}"><i class="fas fa-pencil-alt"></i>  </a>
                 </td>
 
                 <td>
-                    <form   action="/clients/delete/{{id}}?_method=DELETE" method="POST">
+                    <form   action="/patients/delete/{{id}}?_method=DELETE" method="POST">
                         <button onclick="return confirmacion()"  type="submit" class="btn btn-danger ">
                             Eliminar
                         </button>
                     </form>
                 </td>
             </tr>
-        {{/clients}}
+        {{/patients}}
         </tbody>
     </table>
 

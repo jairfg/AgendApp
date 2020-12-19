@@ -1,6 +1,6 @@
 const {Schema , model} =  require('mongoose')
 
-const ClientSchema  = new Schema({
+const PatientSchema  = new Schema({
     name : {type:String , required: true},
     phone : {
         type: String , required : true 
@@ -25,5 +25,5 @@ const ClientSchema  = new Schema({
 })
 
 //nombre del modelo 
-module.exports = model('Client',ClientSchema)
+module.exports = model('Patient',PatientSchema)
 

@@ -20,9 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="388f343c-e607-449a-aba9-f6909c49d9e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/controllers/appointments.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/appointments.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/appointments/all-appointments.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/clients.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/patients.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/users.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/users.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Appointment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Appointment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Client.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Patient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/clients.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/patients.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/images.routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/clients/all-clients.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/patients/all-patients.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/clients/edit-client.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/patients/edit-patient.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/clients/new-client.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/patients/new-patient.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/layouts/main.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/layouts/main.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/notes/all-notes.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/notes/all-notes.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/partials/navigation.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/partials/navigation.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +49,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -49,6 +67,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -60,6 +79,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -88,6 +108,7 @@
       <workItem from="1606066015147" duration="11803000" />
       <workItem from="1606349400287" duration="589000" />
       <workItem from="1606350008129" duration="6769000" />
+      <workItem from="1608342149800" duration="14898000" />
     </task>
     <servers />
   </component>
@@ -105,46 +126,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="612" y="343" width="686" height="427" key="#Notifications" timestamp="1605934186904">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state x="612" y="343" width="686" height="427" key="#Notifications/0.27.1920.1053@0.27.1920.1053" timestamp="1605934186904" />
-    <state x="996" y="304" width="946" height="424" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606078804322">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="996" y="304" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606078804322" />
-    <state x="974" y="335" width="946" height="424" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1606019999870" />
-    <state x="693" y="272" width="524" height="510" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606067478844">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="693" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606067478844" />
-    <state x="693" y="302" width="524" height="510" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1605819711647" />
-    <state width="1892" height="252" key="GridCell.Tab.0.bottom" timestamp="1606349988973">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state width="1893" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606066079689" />
-    <state width="1892" height="252" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1606349988973" />
-    <state width="1892" height="252" key="GridCell.Tab.0.center" timestamp="1606349988972">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state width="1893" height="258" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606066079689" />
-    <state width="1892" height="252" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1606349988972" />
-    <state width="1892" height="252" key="GridCell.Tab.0.left" timestamp="1606349988971">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state width="1893" height="258" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606066079689" />
-    <state width="1892" height="252" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1606349988971" />
-    <state width="1892" height="252" key="GridCell.Tab.0.right" timestamp="1606349988973">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state width="1893" height="258" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606066079689" />
-    <state width="1892" height="252" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1606349988973" />
-    <state x="597" y="73" width="1125" height="912" key="SettingsEditor" timestamp="1606011794921">
-      <screen x="0" y="27" width="1920" height="1053" />
-    </state>
-    <state x="577" y="75" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604872168278" />
-    <state x="597" y="73" width="1125" height="912" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1606011794921" />
   </component>
 </project>

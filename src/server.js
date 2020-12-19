@@ -14,7 +14,7 @@ const app = express()
 require('./config/passport')
 
 //Settings
-app.set('port',process.env.PORT || 5000)
+app.set('port',process.env.PORT || 4000)
 app.set('views',path.join(__dirname,'views'))
 app.engine('.hbs', exphbs({
     defaultLayout: 'main',
@@ -51,9 +51,10 @@ app.use((req,res,next)=> {
 })
 
 //routes
+app.use(require('./routes/appointments.routes'))
 app.use(require('./routes/index.routes'))
 app.use(require('./routes/notes.routes'))
-app.use(require('./routes/clients.routes'))
+app.use(require('./routes/patients.routes'))
 app.use(require('./routes/users.routes'))
 
 

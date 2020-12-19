@@ -1,20 +1,20 @@
 const {Schema , model} =  require('mongoose')
 
 const AppointmentSchema  = new Schema({
-    title : {
-        type: String,
+    patient : {
+        type:String ,
         required : true
     },
-    comments : {
-        type:String
+    time : {
+        type: String,
+        required : true
     },
     date : {
       type: Date,
       required: true
     },
-    client : {
-        type:String ,
-        required : true
+    description : {
+        type:String
     },
     user: {
         type: String,

@@ -4,7 +4,7 @@ const passport = require('passport')
 
 usersController.signup = async (req,res)=> {
     const errors = []
-    const {name,email,password,confirm_password} = req.body
+    const {name,email,password,confirm_password,phone} = req.body
     if(password !== confirm_password){
         errors.push({text:'Las contraseñas no coinciden'})
     }
@@ -12,13 +12,12 @@ usersController.signup = async (req,res)=> {
         errors.push({text:"Las contraseñas deben ser mayores a 6 caracteres"})
     }
     if (errors.length > 0){
-        console.log(errors)
         res.render('index',{errors,
             name,
             email,
             confirm_password,
-            password
-            })
+            password,
+        phone})
     }else{
         const emailUser = await User.findOne({email : email});
         if(emailUser){
@@ -26,7 +25,7 @@ usersController.signup = async (req,res)=> {
             res.redirect('/')
             
         } else {
-            const newUser = new User({name , email,password})
+            const newUser = new User({name , email,password , phone})
             newUser.password = await newUser.encryptPassword(password)
             await newUser.save();
             req.flash('success_msg','Registro exitoso, inicia sesión para comenzar!.')

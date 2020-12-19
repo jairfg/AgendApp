@@ -1,7 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah);
 
-
-
 a, a:hover {
     text-decoration: none;
     outline: none;
@@ -23,4 +21,31 @@ a, a:hover {
 
 .card-footer p{
     font-size: 14px;
+}
+
+.lista-citas .cita {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 2rem;
+    padding-bottom: 3rem;
+
+}
+.lista-citas .cita:last-of-type {
+    border-bottom: 0;
+}
+
+.lista-citas .cita p {
+    margin:0;
+}
+.lista-citas .cita button {
+    margin-top: 1rem!important;
+}
+.lista-citas .cita span {
+    font-weight: bold;
+}
+textarea {
+    height: 200px!important;
+}
+
+svg {
+    width: 21px;
 }
