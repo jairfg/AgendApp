@@ -4,8 +4,8 @@
         <div class="col-md-4 ">
             <h3> {{patient.name}}</h3>
             <img src="/upload/{{patient.nombreArchivo}}" id="image-field" alt="foto perfil" class="img-thumbnail">
-            <p>Registro :{{time patient.createdAt}} </p>
-            <p>Ultima actualización :{{time patient.updatedAt}}</p>
+            <p>Registro :{{timeTransform patient.createdAt}} </p>
+            <p>Ultima actualización :{{timeTransform patient.updatedAt}}</p>
             <input type="file" name="imagen" class="custom-file-input" id="inputGroupFile" onchange="previewImage(event)"  />
             <label  class="custom-file-label" for="inputGroupFile">Edita foto de perfil</label>
 

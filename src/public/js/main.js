@@ -34,15 +34,3 @@ function previewImage(event){
     }
     reader.readAsDataURL(event.target.files[0])
 }
-
-function myFunction(id,name,date,time,description) {
-    const object = {id,name,date,time,description}
-
-    nameInput.value = name;
-    dateInput.value = date;
-    timeInput.value = time;
-    descriptionInput.value = description;
-
-    formCita.querySelector('button[type = "submit"]').textContent = 'Guardar Cambios'
-
-}

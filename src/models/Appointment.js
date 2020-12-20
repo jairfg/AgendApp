@@ -5,11 +5,11 @@ const AppointmentSchema  = new Schema({
         type:String ,
         required : true
     },
-    time : {
+    timeAppointment : {
         type: String,
         required : true
     },
-    date : {
+    dateAppointment : {
       type: Date,
       required: true
     },

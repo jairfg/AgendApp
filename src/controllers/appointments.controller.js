@@ -1,11 +1,16 @@
 const appointmentsController = {}
 const Appointment = require('../models/Appointment')
 const Patient = require('../models/Patient')
+const moment = require('moment')
+moment.locale('es');
+
 
 appointmentsController.createAppointmentForm =  async (req,res) => {
-    const {patient , description , date ,time } = req.body;
-    console.log(time)
-    const appointment = new Appointment({patient,description,date,time});
+    const {patient , description , dateAppointment ,timeAppointment } = req.body;
+  //  const myMomentObject = moment(dateAppointment)
+ //   const date = myMomentObject.add(moment.duration(timeAppointment))
+//    console.log(date)
+    const appointment = new Appointment({patient,description,dateAppointment ,timeAppointment });
     appointment.user = req.user.id;
     console.log(appointment)
     await appointment.save()
@@ -25,10 +30,24 @@ appointmentsController.deleteAppointment = async (req,res) => {
     res.redirect('/appointments')
 }
 
+appointmentsController.renderEditForm = async (req,res) => {
+    const {id} = req.params;
+    const appointment = await Appointment.findById(id);
+    const appointments = await Appointment.find({user : req.user.id}).sort({createdAt: 'desc'})
+    const patients = await Patient.find({user : req.user.id}).sort({createdAt: 'desc'})
+    if(appointment.user !== req.user.id){
+        return res.redirect('/appointments')
+    }
+    res.render('appointments/edit-appointment', {appointment, appointments,patients})
+
+}
+
 
 appointmentsController.updateAppointment = async (req,res) => {
 
 }
+
+
 
 
 
