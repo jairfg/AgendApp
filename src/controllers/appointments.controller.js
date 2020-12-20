@@ -26,5 +26,11 @@ appointmentsController.deleteAppointment = async (req,res) => {
 }
 
 
+appointmentsController.updateAppointment = async (req,res) => {
+
+}
+
+
+
 module.exports = appointmentsController
 
