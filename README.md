@@ -1,2 +1,2 @@
 # AgendApp
-registro de clientes, agendar citas y recordatorios. (Express Mongodb Handlebars) 
+registro de pacientes, agendar citas y recordatorios. 
