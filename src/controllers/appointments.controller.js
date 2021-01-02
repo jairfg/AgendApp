@@ -7,10 +7,11 @@ moment.locale('es');
 
 appointmentsController.createAppointmentForm =  async (req,res) => {
     const {patient , description , dateAppointment ,timeAppointment } = req.body;
-  //  const myMomentObject = moment(dateAppointment)
- //   const date = myMomentObject.add(moment.duration(timeAppointment))
-//    console.log(date)
-    const appointment = new Appointment({patient,description,dateAppointment ,timeAppointment });
+
+    const time = `${timeAppointment}:00`
+    const myMomentObject = moment(dateAppointment)
+    const date = myMomentObject.add(moment.duration(time))
+    const appointment = new Appointment({patient,description,dateAppointment : date ,timeAppointment });
     appointment.user = req.user.id;
     console.log(appointment)
     await appointment.save()
@@ -44,7 +45,7 @@ appointmentsController.renderEditForm = async (req,res) => {
 
 
 appointmentsController.updateAppointment = async (req,res) => {
-
+    console.log(req.body)
 }
 
 

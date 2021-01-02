@@ -20,16 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="388f343c-e607-449a-aba9-f6909c49d9e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/appointments/edit-appointment.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/appointments.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/appointments.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helpers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Appointment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Appointment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/appointments.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/appointments.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/upload/cliente2urwi.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/upload/clientqhiho7.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/upload/clienttfvo5d.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/upload/clienttttjv1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/upload/clientz8fqn8.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/upload/temp/434f8c2ef8e6bea84eca97ef8eede235" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/upload/temp/94ad216fb09506d3eca718415a892ec7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/upload/temp/dba5673572700941267704731823467b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/upload/temp/e1bdd1e402eecee7e4541484afc7b253" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/upload/temp/e2c3cd4abefd2d719ad17ab141591f90" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/upload/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/upload/user.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/appointments/all-appointments.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/appointments/all-appointments.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/notes/all-notes.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/notes/all-notes.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/patients/edit-patient.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/patients/edit-patient.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/appointments/edit-appointment.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/appointments/edit-appointment.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +111,10 @@
       <workItem from="1608420132173" duration="3981000" />
       <workItem from="1608435899637" duration="6616000" />
       <workItem from="1608464038831" duration="4183000" />
+      <workItem from="1609385858712" duration="5851000" />
+      <workItem from="1609417304993" duration="606000" />
+      <workItem from="1609434280735" duration="9795000" />
+      <workItem from="1609598161758" duration="6811000" />
     </task>
     <servers />
   </component>

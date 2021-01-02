@@ -43,7 +43,7 @@
             {{#appointments}}
                 <div  class="cita p-3" data-id="{{id}}">
                     <h2 class="card-title font-weight-bolder">{{patient}}</h2>
-                    <p class=""><span class="font-weight-bolder">Fecha: </span>{{ dateAppointment }}</p>
+                    <p class=""><span class="font-weight-bolder">Fecha: </span>{{ showAppointmentDate dateAppointment }}</p>
                     <p class=""><span class="font-weight-bolder">Hora: </span> {{timeAppointment}}</p>
                     <p class=""><span class="font-weight-bolder">Descripción: </span> {{description}}</p>
                     <form action="/appointments/delete/{{_id}}?_method=DELETE" method="POST">
