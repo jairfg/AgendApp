@@ -9,12 +9,12 @@ const session = require('express-session')
 const passport = require('passport')
 
 
-//Initializations
+//Initializations 984249639
 const app = express()
 require('./config/passport')
 
 //Settings
-app.set('port',process.env.PORT || 6000)
+app.set('port',process.env.PORT || 4000)
 app.set('views',path.join(__dirname,'views'))
 app.engine('.hbs', exphbs({
     defaultLayout: 'main',

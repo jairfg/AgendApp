@@ -2,15 +2,20 @@ const moment = require('moment')
 const helpers = {}
 moment.locale('es');
 
-// formato =>
+// para las notas
 helpers.timeTransform = createdAt => {
    return moment(createdAt).format('MMMM D YYYY, h:mm a')
 }
+helpers.updateNote = updatedAt => {
+   return moment(updatedAt).startOf('hour').fromNow();
+}
 
+// para la fecha de las citas listadas
 helpers.showAppointmentDate = dateAppointment => {
    return moment(dateAppointment).format('LL')
 }
 
+// para mostrar la fecha en el form edit cita
 helpers.AppointmentEdit = dateAppointment => {
    const date = replaceEdit(moment(dateAppointment).format('L'))
    const list = date.split('-')

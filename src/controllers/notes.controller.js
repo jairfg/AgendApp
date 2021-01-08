@@ -1,10 +1,7 @@
 const notesController = {}
 const Note = require('../models/Note')
 
-notesController.renderNoteForm = (req,res) => {
-    console.log(req.user)
-    res.render('notes/new-note')
-}
+
 notesController.createNoteForm = async (req,res) => {
     const {title, description} = req.body
     const newNote = new Note({title,description})
@@ -14,16 +11,18 @@ notesController.createNoteForm = async (req,res) => {
     res.redirect('/notes')
 }
 notesController.renderNotes = async (req,res) => {
-    const notes = await Note.find({user : req.user.id}).sort({createdAt: 'desc'})
+    const notes = await Note.find({user : req.user.id}).sort({updatedAt: 'desc'})
     res.render('notes/all-notes',{notes})
 }
 notesController.renderEditForm = async (req,res) => {
     const {id} = req.params
     const note = await Note.findById(id)
+    const notes = await Note.find({user : req.user.id}).sort({updatedAt: 'desc'})
+    const notes_edit = notes.filter(el => el.id !== note.id)
     if(note.user !== req.user.id){
         return res.redirect('/notes')
     }
-    res.render('notes/edit-note',{note})
+    res.render('notes/edit-note',{note, notes_edit})
 }
 
 notesController.updateNote = async (req,res) => {
