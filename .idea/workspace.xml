@@ -23,15 +23,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/notes.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/notes.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helpers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/notes.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/notes.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/layouts/main.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/layouts/main.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/notes/all-notes.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/notes/all-notes.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/notes/edit-note.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/notes/edit-note.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/notes/new-note.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/partials/messages.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/partials/messages.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/partials/footer.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/partials/footer.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +42,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="b957fea3-1ad7-46c4-8726-697b05237d3b" />
@@ -111,7 +113,7 @@
       <workItem from="1609434280735" duration="9795000" />
       <workItem from="1609598161758" duration="6873000" />
       <workItem from="1609638450143" duration="34000" />
-      <workItem from="1610119643739" duration="10996000" />
+      <workItem from="1610119643739" duration="18087000" />
     </task>
     <servers />
   </component>

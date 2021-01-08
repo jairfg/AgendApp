@@ -11,8 +11,14 @@ notesController.createNoteForm = async (req,res) => {
     res.redirect('/notes')
 }
 notesController.renderNotes = async (req,res) => {
+    const noteMessage = []
     const notes = await Note.find({user : req.user.id}).sort({updatedAt: 'desc'})
-    res.render('notes/all-notes',{notes})
+    if(notes.length === 0){
+        noteMessage.push({text:'Aún no tienes niguna nota agregada'})
+        console.log(noteMessage)
+         return res.render('notes/all-notes', { noteMessage })
+    }
+     return res.render('notes/all-notes',{notes})
 }
 notesController.renderEditForm = async (req,res) => {
     const {id} = req.params

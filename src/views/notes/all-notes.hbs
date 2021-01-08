@@ -1,9 +1,18 @@
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Crear nueva nota
 </button>
 
 <div class="row ">
-    {{#each notes}} 
+
+    {{#each noteMessage}}
+        <div class="mt-5   text-center">
+            <strong> {{text}}</strong>
+
+        </div>
+
+    {{/each}}
+
+    {{#each notes}}
         <div class="mt-4 col-md-4">
             <div class="note  card">
                 <div class="card-body">
@@ -16,8 +25,8 @@
                     </form>
                 </div>
                 <div class="card-footer">
-                    <p >{{timeTransform createdAt}}</p>
-                    <p > Actualizado : {{ timeTransform updatedAt}}</p>
+                    <p > {{ timeTransform  createdAt}}</p>
+                    <p > {{ updateNote  updatedAt createdAt}}</p>
                 </div>
             </div>
         </div>
@@ -42,7 +51,7 @@
                             </div>
                 </div>
                 <div class=" modal-footer">
-                    <button class="btn btn-dark btn" type="submit">
+                    <button class="btn btn-success" type="submit">
                         Guardar
                     </button>
                 </div>

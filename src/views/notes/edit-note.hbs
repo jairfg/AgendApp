@@ -1,8 +1,8 @@
 <div class="row ">
+
     <div class="col-md-4">
         <div class="note card">
             <form action="/notes/edit/{{note.id}}?_method=PUT" method="POST">
-
                 <div class="card-body">
                     <div class="form-group">
                         <input type="text" name="title" class="note form-control" value="{{note.title}}">
@@ -13,8 +13,8 @@
 
                 </div>
                 <div class="card-footer">
-                    <div class="form-group">
-                        <button class="btn btn-dark btn " type="submit">
+                    <div class="form-group  ">
+                        <button class="btn btn-success  " type="submit">
                             Guardar
                         </button>
                     </div>

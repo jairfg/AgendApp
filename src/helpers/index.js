@@ -6,8 +6,12 @@ moment.locale('es');
 helpers.timeTransform = createdAt => {
    return moment(createdAt).format('MMMM D YYYY, h:mm a')
 }
-helpers.updateNote = updatedAt => {
-   return moment(updatedAt).startOf('hour').fromNow();
+helpers.updateNote = (updatedAt, createdAt)  => {
+   const created =  moment(createdAt).format('MMMM D YYYY, h:mm a')
+   const updated = moment(updatedAt).format('MMMM D YYYY, h:mm a')
+   if(created !== updated){
+      return `Actualizado: ${updated}`
+   }
 }
 
 // para la fecha de las citas listadas
@@ -30,12 +34,6 @@ const replaceEdit = date => {
    }
    return newdate
 }
-
-
-
-// 1998-01-02 => fecha para mostrar en edit form
-// 09/01/2021
-
 
 
 module.exports = helpers
