@@ -6,6 +6,7 @@ const formCita = document.querySelector('#nueva-cita');
 
 
 window.onload = () => {
+
     const alert = document.querySelector( '[role = "alert"]')
     if(alert) {
         setTimeout(()=> {

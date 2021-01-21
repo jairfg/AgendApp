@@ -21,11 +21,22 @@
   <component name="ChangeListManager">
     <list default="true" id="388f343c-e607-449a-aba9-f6909c49d9e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/passport.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/notes.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/notes.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helpers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/appointments/edit-appointment.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/appointments/edit-appointment.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/layouts/main.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/layouts/main.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/notes/all-notes.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/notes/all-notes.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/notes/edit-note.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/notes/edit-note.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/partials/footer.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/partials/footer.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/partials/errors.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/partials/errors.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/partials/navigation.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/partials/navigation.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/patients/all-patients.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/patients/all-patients.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/patients/edit-patient.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/patients/edit-patient.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/patients/new-patient.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/patients/new-patient.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +83,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -114,6 +125,9 @@
       <workItem from="1609598161758" duration="6873000" />
       <workItem from="1609638450143" duration="34000" />
       <workItem from="1610119643739" duration="18087000" />
+      <workItem from="1611222773600" duration="5254000" />
+      <workItem from="1611248690690" duration="9680000" />
+      <workItem from="1611263147289" duration="9899000" />
     </task>
     <servers />
   </component>
@@ -131,5 +145,31 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="702" y="361" key="#Scopes" timestamp="1611222925438">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="702" y="361" key="#Scopes/0.0.1920.1040@0.0.1920.1040" timestamp="1611222925438" />
+    <state width="1688" height="257" key="GridCell.Tab.0.bottom" timestamp="1611248468991">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1688" height="257" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1611248468991" />
+    <state width="1688" height="257" key="GridCell.Tab.0.center" timestamp="1611248468990">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1688" height="257" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1611248468990" />
+    <state width="1688" height="257" key="GridCell.Tab.0.left" timestamp="1611248468990">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1688" height="257" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1611248468990" />
+    <state width="1688" height="257" key="GridCell.Tab.0.right" timestamp="1611248468990">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1688" height="257" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1611248468990" />
+    <state x="337" y="72" key="SettingsEditor" timestamp="1611271475061">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="337" y="72" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1611271475061" />
   </component>
 </project>

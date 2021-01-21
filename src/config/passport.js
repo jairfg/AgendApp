@@ -12,13 +12,13 @@ passport.deserializeUser(async (id, done) => {
     done(null, user);
 });
 
-
 passport.use( new LocalStrategy({
     usernameField: 'email',
     passwordField: 'password',
     passReqToCallback: true
 }, async (req, email, password, done) => {
     const user = await User.findOne({email: email});
+    console.log(user)
     if(!user) {
         return done(null, false, {message : 'No se ha encontrado el usuario'});
     }

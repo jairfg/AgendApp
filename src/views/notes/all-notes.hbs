@@ -1,11 +1,11 @@
-<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Crear nueva nota
 </button>
-
 <div class="row ">
 
     {{#each noteMessage}}
-        <div class="mt-5   text-center">
+        <div class="mt-4   text-center">
             <strong> {{text}}</strong>
 
         </div>
@@ -13,7 +13,7 @@
     {{/each}}
 
     {{#each notes}}
-        <div class="mt-4 col-md-4">
+        <div class="mt-4 col-10 offset-1 col-md-3 offset-md-0">
             <div class="note  card">
                 <div class="card-body">
                     <h4 class="card-title d-flex justify-content-between align-items-center">
@@ -21,44 +21,52 @@
                     </h4>
                     <p>{{description}}</p>
                     <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
-                        <button class="fabutton"><i class="fas fa-trash"></i></button>
+                        <button  onclick="return confirmacion()"  class="fabutton"><i class="fas fa-trash"></i></button>
                     </form>
                 </div>
                 <div class="card-footer">
-                    <p > {{ timeTransform  createdAt}}</p>
-                    <p > {{ updateNote  updatedAt createdAt}}</p>
+                    <p class="mb-0"> {{ timeTransform  createdAt}}</p>
+                    <p  > {{ updateNote  updatedAt createdAt}}</p>
                 </div>
             </div>
         </div>
     {{/each}}
 </div>
 
-<!-- Nueva Nota -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class=" modal-dialog" >
-        <form action="/notes/add" method="POST">
-            <div class="note  modal-content">
-                <div class=" modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"> Nueva Nota</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="  modal-body">
-                            <div class="form-group">
-                                <input  type="text" name="title" class=" note form-control" placeholder="Titulo" >
+    <div class="row justify-content-md-center">
+        <div class="col-10">
+            <div class="modal " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog  modal-dialog-centered " >
+                    <form action="/notes/add" method="POST">
+                        <div class="note  modal-content">
+                            <div class=" modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"> Nueva Nota</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="form-group">
-                                <textarea name="description" placeholder="Descripción" class=" note form-control" cols="30" rows="10"> </textarea>
+                            <div class="  modal-body">
+                                <div class="form-group">
+                                    <input  type="text" name="title" class=" note form-control" placeholder="Titulo" >
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="description"  class=" note form-control" cols="50" rows="5">  </textarea>
+                                </div>
                             </div>
-                </div>
-                <div class=" modal-footer">
-                    <button class="btn btn-success" type="submit">
-                        Guardar
-                    </button>
+                            <div class=" modal-footer">
+                                <button class="btn btn-primary" type="submit">
+                                    Guardar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
                 </div>
             </div>
-        </form>
+        </div>
+
 
     </div>
-</div>
 
+
+
+<!-- Nueva Nota -->
 

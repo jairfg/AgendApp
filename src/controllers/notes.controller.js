@@ -14,7 +14,7 @@ notesController.renderNotes = async (req,res) => {
     const noteMessage = []
     const notes = await Note.find({user : req.user.id}).sort({updatedAt: 'desc'})
     if(notes.length === 0){
-        noteMessage.push({text:'Aún no tienes niguna nota agregada'})
+        noteMessage.push({text:'No tienes notas agregadas'})
         console.log(noteMessage)
          return res.render('notes/all-notes', { noteMessage })
     }

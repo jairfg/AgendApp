@@ -10,7 +10,7 @@ helpers.updateNote = (updatedAt, createdAt)  => {
    const created =  moment(createdAt).format('MMMM D YYYY, h:mm a')
    const updated = moment(updatedAt).format('MMMM D YYYY, h:mm a')
    if(created !== updated){
-      return `Actualizado: ${updated}`
+      return `actualizado: ${updated}`
    }
 }
 

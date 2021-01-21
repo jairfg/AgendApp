@@ -6,7 +6,6 @@ a, a:hover {
     color: black;
 
 }
-
 .fabutton {
     background: none;
     padding: 0px;
@@ -15,37 +14,46 @@ a, a:hover {
 .note {
     font:16px 'Gloria Hallelujah', cursive;
     border:0;
-    background: linear-gradient(#F9EFAF, #F7E98D);
-
+    background: linear-gradient(#fffbbb, #fcf8b4);
 }
-
+#pacientes img {
+    height: 200px;
+    width: 200px;
+}
+#image-field {
+    height: 200px;
+    width: 200px;
+}
 .card-footer p{
-    font-size: 14px;
+    font-size: 12px;
 }
-
-.lista-citas .cita {
-    border-bottom: 1px solid #e1e1e1;
-    padding: 2rem;
-    padding-bottom: 3rem;
-
-}
-.lista-citas .cita:last-of-type {
-    border-bottom: 0;
-}
-
-.lista-citas .cita p {
-    margin:0;
-}
-.lista-citas .cita button {
-    margin-top: 1rem!important;
-}
-.lista-citas .cita span {
-    font-weight: bold;
-}
-textarea {
-    height: 200px!important;
-}
-
 svg {
     width: 21px;
+}
+
+.file-input__input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.file-input__label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 12px;
+    background-color: #4245a8;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+}
+
+.file-input__label svg {
+    height: 16px;
+    margin-right: 4px;
 }
