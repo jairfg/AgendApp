@@ -1,56 +1,64 @@
-<div id="contenido" class="row">
-    <div class="col-md-6 agregar-cita">
+
+
+<div  class="row">
+    <div class="col-md-6 offset-md-0 col-10 offset-1  mt-4  ">
+        <h2 class="">Editar Cita</h2>
         <form id="nueva-cita" method="POST" action="/appointments/edit/{{appointment.id}}?_method=PUT">
-            <h2 class="mb-4">Editar cita</h2>
-            <div class="form-group row">
-                <label for = "paciente" class="col-sm-4 col-lg-4 col-form-label" >Paciente</label>
-                <select class="form-control col-sm-8 col-lg-8" id="patient" name ="patient">
+            <div class="form-group">
+                <label for="patient">Paciente</label>
+                <select class="form-control" id="patient" name="patient">
                     {{#patients}}
                         <option id="name" >{{name}}</option>
                     {{/patients}}
                 </select>
             </div>
-            <div class="form-group row">
-                <label class="col-sm-4 col-lg-4 col-form-label">Fecha:</label>
-                <div class="col-sm-8 col-lg-8">
-                    <input type="date" id="dateAppointment" name="dateAppointment" class="form-control"      value="{{AppointmentEdit appointment.dateAppointment}}">
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label class="col-sm-4 col-lg-4 col-form-label">Hora:</label>
-                <div class="col-sm-8 col-lg-8">
-                    <input type="time" id="timeAppointment" name="timeAppointment" class="form-control" value="{{appointment.timeAppointment}}">
-                </div>
-            </div>
-
-            <div class="form-group row">
-                <label class="col-sm-4 col-lg-4 col-form-label">Descripción:</label>
-                <div class="col-sm-8 col-lg-8">
-                    <textarea id="description" name="description" class="form-control" >{{appointment.description}}</textarea>
-                </div>
-            </div>
-
             <div class="form-group">
-                <button type="submit" class="btn btn-primary ">Guardar Cambios</button>
+                <label for="dateAppointment" >Fecha:</label>
+                <input type="date" id="dateAppointment" name="dateAppointment"  value="{{AppointmentEdit appointment.dateAppointment}}" class="form-control">
+            </div>
+            <div class="form-group ">
+                <label for="timeAppointment">Hora:</label>
+                <input type="time" id="timeAppointment" name="timeAppointment" class="form-control" value="{{appointment.timeAppointment}}">
+            </div>
+
+            <div class="form-group ">
+                <label for = "description">Descripción:</label>
+                <textarea id="description" name="description" class="form-control" > {{appointment.description}} </textarea>
+            </div>
+            <div class="form-group row ">
+                <div class="col-md-4 offset-md-4 text-center">
+                    <button class="btn btn-success mt-2 mb-4" type="submit">
+                        Guardar cambios
+                    </button>
+                </div>
             </div>
         </form>
     </div>
-    <div class="col-md-6">
-        <h2 id="administra" class="mb-4">Administra tus Citas</h2>
-        <ul id="citas" class="list-group lista-citas">
-            {{#appointments}}
-                <div  class="cita p-3" data-id="{{id}}">
-                    <h2 class="card-title font-weight-bolder">{{patient}}</h2>
-                    <p class=""><span class="font-weight-bolder">Fecha: </span>{{ showAppointmentDate  dateAppointment}}</p>
-                    <p class=""><span class="font-weight-bolder">Hora: </span>{{timeAppointment}}</p>
-                    <p class=""><span class="font-weight-bolder">Descripción: </span> {{description}}</p>
-                    <form action="/appointments/delete/{{_id}}?_method=DELETE" method="POST">
-                        <button type="submit" class="btn btn-danger mr-2">Eliminar <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> </button>
-                    </form>
-                    <a class="btn btn-info" href="/appointments/edit/{{_id}}" role="button" > Editar <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg> </a>
+    <div class="col-md-4 offset-md-1 col-10 offset-1  mt-4">
+        <h2 class="">Administra tus Citas</h2>
+
+        {{#appointments}}
+            <div data-id="{{id}}" class="card border-light mb-3" style="max-width: 18rem;">
+                <div class="card-body ">
+                    <h5 class="card-title">{{patient}}</h5>
+                    <p class="card-text">Fecha: {{ showAppointmentDate dateAppointment }} </p>
+                    <p class="card-text">Hora: {{timeAppointment}}</p>
+                    <p class="card-text">Descripción: {{description}} </p>
+                    <div class="row">
+                        <div class="col">
+                            <form action="/appointments/delete/{{_id}}?_method=DELETE" method="POST">
+                                <button   type="submit" class="btn btn-danger mt-2">Eliminar</button>
+                            </form>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-info mt-2" href="/appointments/edit/{{_id}}" role="button" > Editar </button>
+                        </div>
+                    </div>
+
                 </div>
-            {{/appointments}}
-        </ul>
+            </div>
+
+        {{/appointments}}
     </div>
+
 </div> <!--.row-->

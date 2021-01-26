@@ -1,6 +1,6 @@
 <form action="/patient/edit/{{patient.id}}?_method=PUT" method="POST" enctype="multipart/form-data">
 
-    <div class="row">
+    <div class="row mt-4">
         <div class="col-10 offset-1 col-md-4 offset-md-0 text-center">
             <img src="/upload/{{patient.nombreArchivo}}"  id="image-field" alt="foto perfil" class="img-thumbnail img-fluid" >
             <p class="mb-0">Registro:{{timeTransform patient.createdAt}} </p>
