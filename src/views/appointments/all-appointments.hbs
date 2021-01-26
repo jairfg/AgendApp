@@ -34,8 +34,10 @@
         </form>
     </div>
     <div class="col-md-4 offset-md-1 col-10 offset-1  mt-4">
-        <h2 class="">Administra tus Citas</h2>
 
+        {{#if appointments}}
+        <h2 class="">Administra tus Citas</h2>
+        {{/if}}
             {{#appointments}}
                 <div data-id="{{id}}" class="card border-light mb-3" style="max-width: 18rem;">
                     <div class="card-body ">
