@@ -1,10 +1,14 @@
 const mongoose = require('mongoose')
-const {AGENDAPP_MONGODB_HOST,AGENDAPP_MONGODB_DATABASE} = process.env
-const MONGODB_URI = `mongodb://${AGENDAPP_MONGODB_HOST}/${AGENDAPP_MONGODB_DATABASE}`
-mongoose.connect(MONGODB_URI, {
+const USER = process.env.DB_USER;
+const PASSWORD = process.env.DB_PASSWORD;
+const DB_NAME = process.env.DB_NAME;
+const MONGO_URI = `mongodb+srv://${USER}:${PASSWORD}@${process.env.DB_HOST}/${DB_NAME}?retryWrites=true&w=majority`;
+
+mongoose.connect(MONGO_URI, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
-    useCreateIndex : true
+    useCreateIndex : true,
     })
-    .then(() => console.log('MongoDB Connected...'))
+    .then((db) => console.log('MongoDB Connected...',db.connection.host))
     .catch((err) => console.log(err))
+
