@@ -1,6 +1,6 @@
 const {Router} = require('express')
 const router = Router()
-const {renderPatientForm,createPatientForm,renderPatients,renderEditForm,updatePatient,deletePatient} = require('../controllers/patients.controller')
+const {renderPatientForm,createPatientForm,renderPatients,renderEditForm,updatePatient,deletePatient,searchPatient} = require('../controllers/patients.controller')
 const {isAuthenticated} = require('../helpers/auth')
 //new Patient
 router.get('/patient/add',isAuthenticated,renderPatientForm)
@@ -15,5 +15,9 @@ router.put('/patient/edit/:id', isAuthenticated , updatePatient)
 
 //delete 
 router.delete('/patients/delete/:id', isAuthenticated , deletePatient)
+
+//search patient
+router.get('/patient', isAuthenticated, searchPatient)
+
 
 module.exports = router

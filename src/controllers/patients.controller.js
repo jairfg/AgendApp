@@ -48,9 +48,16 @@ patientsController.createPatientForm = async (req, res) => {
 
 
 patientsController.renderPatients = async (req, res) => {
+    console.log(req.query)
     const patients = await Patient.find({user : req.user.id}).sort({createdAt: 'desc'})
     res.render('patients/all-patients',{patients})
 }
+
+patientsController.searchPatient = async (req,res) => {
+    console.log("hola")
+
+}
+
 
 patientsController.renderEditForm = async (req, res) => {
     const {id} = req.params

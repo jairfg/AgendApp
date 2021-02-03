@@ -1,20 +1,28 @@
 <div >
     <a href="/patient/add"  class="btn btn-primary"><i class="fas fa-user-plus"></i> Agregar</a>
 </div>
-
-
-<div class="row ">
-    <div class="col-10 offset-1 col-md-4   offset-md-0 mt-4">
-            <input class="form-control" type="text" placeholder="Buscar Paciente" aria-label="Search">
-    </div>
-
-</div>
+            <form action="/patient"  method="GET" >
+                <div class="row ">
+                    <div class="col-7 offset-1 col-md-4   offset-md-0 mt-4">
+                        <input list="optiones"  name="buscar"    class="form-control"  placeholder="Nombre del paciente" type="text">
+                        <datalist id="optiones">
+                            {{#patients}}
+                                <option  value="{{name}}">
+                                </option>
+                            {{/patients}}
+                        </datalist>
+                    </div>
+                    <div class="col-4  col-md-8   offset-md-0 mt-4">
+                        <input type="submit" value="Buscar">
+                    </div>
+                </div>
+            </form>
 
 <div class="row" id="pacientes">
     {{#patients}}
     <div class="col-10 offset-1 col-md-3 offset-md-0 ">
         <div class="card mt-4" >
-            <img src="/upload/{{nombreArchivo}}" class=" card-img-top mx-auto img-thumbnail img-fluid" alt="...">
+            <img src="/upload/{{nombreArchivo}}" class=" card-img-top mx-auto  img-fluid" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{name}}<a href="/patient/edit/{{id}}"><svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg> </a>
                 </h5>

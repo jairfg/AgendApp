@@ -21,6 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="388f343c-e607-449a-aba9-f6909c49d9e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/patients.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/patients.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/patients.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/patients.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/appointments/all-appointments.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/appointments/all-appointments.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/appointments/edit-appointment.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/appointments/edit-appointment.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/patients/all-patients.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/patients/all-patients.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +67,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/patients" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -144,7 +150,8 @@
       <workItem from="1611740489204" duration="1499000" />
       <workItem from="1611742031086" duration="2761000" />
       <workItem from="1611747652259" duration="12000" />
-      <workItem from="1612236717595" duration="1337000" />
+      <workItem from="1612236717595" duration="4288000" />
+      <workItem from="1612307298057" duration="21503000" />
     </task>
     <servers />
   </component>
