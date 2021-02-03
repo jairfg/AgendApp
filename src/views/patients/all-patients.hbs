@@ -1,10 +1,10 @@
 <div >
     <a href="/patient/add"  class="btn btn-primary"><i class="fas fa-user-plus"></i> Agregar</a>
 </div>
-            <form action="/patient"  method="GET" >
+            <form action="/search"  method="GET" >
                 <div class="row ">
                     <div class="col-7 offset-1 col-md-4   offset-md-0 mt-4">
-                        <input list="optiones"  name="buscar"    class="form-control"  placeholder="Nombre del paciente" type="text">
+                        <input list="optiones"  name="patient"   autocomplete="off" class="form-control"  placeholder="Nombre del paciente" type="text">
                         <datalist id="optiones">
                             {{#patients}}
                                 <option  value="{{name}}">
@@ -13,7 +13,7 @@
                         </datalist>
                     </div>
                     <div class="col-4  col-md-8   offset-md-0 mt-4">
-                        <input type="submit" value="Buscar">
+                        <button type="submit" class="btn btn-primary">Buscar </button>
                     </div>
                 </div>
             </form>

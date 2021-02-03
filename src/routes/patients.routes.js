@@ -17,7 +17,7 @@ router.put('/patient/edit/:id', isAuthenticated , updatePatient)
 router.delete('/patients/delete/:id', isAuthenticated , deletePatient)
 
 //search patient
-router.get('/patient', isAuthenticated, searchPatient)
+router.get('/search', isAuthenticated, searchPatient)
 
 
 module.exports = router
