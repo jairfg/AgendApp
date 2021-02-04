@@ -2,7 +2,6 @@ const moment = require('moment')
 const helpers = {}
 moment.locale('es');
 
-// para las notas
 helpers.timeTransform = createdAt => {
    console.log(createdAt)
    const newtime = moment(createdAt).format('MMMM D YYYY, h:mm a')
