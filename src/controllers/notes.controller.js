@@ -1,4 +1,4 @@
-const notesController = {}
+    const notesController = {}
 const Note = require('../models/Note')
 
 
@@ -13,6 +13,7 @@ notesController.createNoteForm = async (req,res) => {
 notesController.renderNotes = async (req,res) => {
     const noteMessage = []
     const notes = await Note.find({user : req.user.id}).sort({updatedAt: 'desc'})
+    console.log(notes)
     if(notes.length === 0){
         noteMessage.push({text:'No tienes notas agregadas'})
         console.log(noteMessage)

@@ -4,7 +4,10 @@ moment.locale('es');
 
 // para las notas
 helpers.timeTransform = createdAt => {
-   return moment(createdAt).format('MMMM D YYYY, h:mm a')
+   console.log(createdAt)
+   const newtime = moment(createdAt).format('MMMM D YYYY, h:mm a')
+   console.log(newtime)
+   return newtime
 }
 helpers.updateNote = (updatedAt, createdAt)  => {
    const created =  moment(createdAt).format('MMMM D YYYY, h:mm a')

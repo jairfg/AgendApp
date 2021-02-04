@@ -7,7 +7,6 @@ moment.locale('es');
 
 appointmentsController.createAppointmentForm =  async (req,res) => {
     const {patient , description , dateAppointment ,timeAppointment } = req.body;
-
     const time = `${timeAppointment}:00`
     const myMomentObject = moment(dateAppointment)
     const date = myMomentObject.add(moment.duration(time))
@@ -21,6 +20,7 @@ appointmentsController.createAppointmentForm =  async (req,res) => {
 appointmentsController.renderAppointments = async (req,res) => {
     const patients = await Patient.find({user : req.user.id}).sort({createdAt: 'desc'})
     const appointments = await Appointment.find({user : req.user.id}).sort({createdAt: 'desc'})
+    console.log(appointments)
     res.render('appointments/all-appointments' , {appointments , patients})
 }
 
