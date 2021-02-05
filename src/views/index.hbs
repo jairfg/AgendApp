@@ -14,7 +14,7 @@
                 Inicia Sesión
             </div>
             <div class="card-body">
-                <form action="/users/signin" method="POST" >
+                <form action="/users/signin" method="POST"  >
             
                        <div class="form-group">
                         <input type="email" class="form-control" name="email" placeholder="Correo electrónico">
@@ -42,7 +42,7 @@
                                 <h5 class="modal-title" id="exampleModalLabel">Registro de cuenta</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <form action="/users/signup" method="POST">
+                            <form action="/users/signup" method="POST" autocomplete="off" >
                                 <div class="modal-body">
                                     <div class="form-group mt-2">
                                         <input type="tel" class="form-control" name="name" placeholder="Nombre completo" value="{{name}}">

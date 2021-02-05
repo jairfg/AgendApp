@@ -31,13 +31,15 @@ patientsController.renderPatientForm = async (req, res) => {
 
 patientsController.createPatientForm = async (req, res) => {
     if(req.file === undefined){
-        const {name,email,phone,description,nroidentidad }  = req.body
+        let {name,email,phone,description,nroidentidad }  = req.body
+        name = name.trim()
         const newPatient = new Patient({name,email,phone,description,nroidentidad,nombreArchivo : 'user.png'})
         newPatient.user = req.user.id
         await newPatient.save()
     }else{
         const nombreArchivo = await nombreAleatorio(req,res)
-        const {name,email,phone,description,nroidentidad }  = req.body
+        let {name,email,phone,description,nroidentidad }  = req.body
+        name = name.trim()
         const newPatient = new Patient({name,email,phone,description,nroidentidad,nombreArchivo})
         newPatient.user = req.user.id
         await newPatient.save()
@@ -54,10 +56,24 @@ patientsController.renderPatients = async (req, res) => {
 }
 
 patientsController.searchPatient = async (req,res) => {
-    const {patient} = req.query;
-    const result = await Patient.findOne({name : patient})
-    console.log(result)
-    res.render('patients/edit-patient',{patient: result})
+        console.log(req.query)
+        let {patient} = req.query;
+        patient = patient.trim()
+        const result = await Patient.findOne({name : patient})
+        if(patient === ''){
+            req.flash('error_msg' , 'Campo vacío')
+            res.redirect('/patients')
+        }
+        else if(result === null) {
+            req.flash('error_msg' , 'Paciente no encontrado')
+            res.redirect('/patients')
+        }
+        else {
+            res.render('patients/edit-patient',{patient: result})
+        }
+
+
+
 }
 
 
@@ -87,6 +103,7 @@ patientsController.updatePatient = async  (req, res) => {
 patientsController.deletePatient = async (req, res) => {
     const {id} = req.params
     const patient = await Patient.findByIdAndDelete(id)
+    req.flash('success_msg','Paciente Eliminado')
     res.redirect('/patients')
 }
 

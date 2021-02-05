@@ -14,6 +14,7 @@ appointmentsController.createAppointmentForm =  async (req,res) => {
     appointment.user = req.user.id;
     console.log(appointment)
     await appointment.save()
+    req.flash('success_msg','Cita agregada')
     res.redirect('/appointments')
 }
 
@@ -45,7 +46,13 @@ appointmentsController.renderEditForm = async (req,res) => {
 
 
 appointmentsController.updateAppointment = async (req,res) => {
-    console.log(req.body)
+    const {patient , dateAppointment, timeAppointment ,description} = req.body;
+    const time = `${timeAppointment}:00`
+    const myMomentObject = moment(dateAppointment)
+    const date = myMomentObject.add(moment.duration(time))
+    await Appointment.findByIdAndUpdate(req.params.id,{patient,description,dateAppointment : date ,timeAppointment })
+    req.flash('success_msg','Cita actualizada')
+    res.redirect('/appointments')
 }
 
 
