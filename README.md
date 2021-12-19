@@ -18,11 +18,7 @@ https://agenda-app-mongo.herokuapp.com/
       <br><br>
       <img src="https://raw.githubusercontent.com/JairKevinFG/AgendApp/master/src/images/1.jpeg">
 </p>
-<p align="center">
-    Notas o recordatorios
-      <br><br>
-      <img src="https://raw.githubusercontent.com/JairKevinFG/AgendApp/master/src/images/3.jpeg">
-</p>
+
 
 
 
