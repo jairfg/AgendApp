@@ -1,5 +1,5 @@
 # AgendApp NodeJS MongoDB
-registro de pacientes, agendar citas y recordatorios. 
+Agenda Personal- guardar notas , contactos y meetings.
 https://agenda-app-mongo.herokuapp.com/
 
 
