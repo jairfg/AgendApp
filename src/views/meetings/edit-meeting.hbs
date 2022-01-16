@@ -1,27 +1,27 @@
 <div  class="row">
     <div class="col-md-6 offset-md-0 col-10 offset-1  mt-4  ">
-        <h2 class="">Editar Cita</h2>
-        <form id="nueva-cita" method="POST" action="/appointments/edit/{{appointment.id}}?_method=PUT">
+        <h2 class="">Editar Meeting</h2>
+        <form id="nuevo-meeting" method="POST" action="/meetings/edit/{{meeting.id}}?_method=PUT">
             <div class="form-group">
-                <label for="patient">Paciente</label>
-                <select class="form-control" id="patient" name="patient">
-                    {{#patients}}
+                <label for="contact">Contacto</label>
+                <select class="form-control" id="contact" name="contact">
+                    {{#contacts}}
                         <option id="name" >{{name}}</option>
-                    {{/patients}}
+                    {{/contacts}}
                 </select>
             </div>
             <div class="form-group">
-                <label for="dateAppointment" >Fecha:</label>
-                <input type="date" id="dateAppointment" name="dateAppointment"  value="{{AppointmentEdit appointment.dateAppointment}}" class="form-control">
+                <label for="dateMeeting" >Fecha:</label>
+                <input type="date" id="dateMeeting" name="dateMeeting"  value="{{MeetingEdit meeting.dateMeeting}}" class="form-control">
             </div>
             <div class="form-group ">
-                <label for="timeAppointment">Hora:</label>
-                <input type="time" id="timeAppointment" name="timeAppointment" class="form-control" value="{{appointment.timeAppointment}}">
+                <label for="timeMeeting">Hora:</label>
+                <input type="time" id="timeMeeting" name="timeMeeting" class="form-control" value="{{meeting.timeMeeting}}">
             </div>
 
             <div class="form-group ">
                 <label for = "description">Descripción:</label>
-                <textarea id="description" name="description" class="form-control" > {{appointment.description}} </textarea>
+                <textarea id="description" name="description" class="form-control" > {{meeting.description}} </textarea>
             </div>
             <div class="form-group row ">
                 <div class="col-md-4 offset-md-4 text-center">
@@ -35,16 +35,16 @@
     <div class="col-md-4 offset-md-1 col-10 offset-1  mt-4">
         <h2 class="">Administra tus Citas</h2>
 
-        {{#appointments}}
+        {{#meetings}}
             <div data-id="{{id}}" class="card border-light mb-3" style="max-width: 18rem;">
                 <div class="card-body ">
-                    <h5 class="card-title">{{patient}}</h5>
-                    <p class="card-text">Fecha: {{ showAppointmentDate dateAppointment }} </p>
-                    <p class="card-text">Hora: {{timeAppointment}}</p>
+                    <h5 class="card-title">{{contact}}</h5>
+                    <p class="card-text">Fecha: {{ showMeetingDate dateMeeting }} </p>
+                    <p class="card-text">Hora: {{timeMeeting}}</p>
                     <p class="card-text">Descripción: {{description}} </p>
                     <div class="row">
                         <div class="col">
-                            <form action="/appointments/delete/{{_id}}?_method=DELETE" method="POST">
+                            <form action="/meetings/delete/{{_id}}?_method=DELETE" method="POST">
                                 <button type="button" class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal{{id}}">
                                     Eliminar
                                 </button>
@@ -56,7 +56,7 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                Estas seguro que quieres eliminar la cita de {{patient}} ?
+                                                Estas seguro que quieres eliminar la reunión con {{contact}} ?
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -68,14 +68,14 @@
                             </form>
                         </div>
                         <div class="col">
-                            <button class="btn btn-info mt-2" href="/appointments/edit/{{_id}}" role="button" > Editar </button>
+                            <button class="btn btn-info mt-2" href="/meetings/edit/{{_id}}" role="button" > Editar </button>
                         </div>
                     </div>
 
                 </div>
             </div>
 
-        {{/appointments}}
+        {{/meetings}}
     </div>
 
 </div> <!--.row-->

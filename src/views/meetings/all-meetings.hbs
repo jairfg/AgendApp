@@ -1,23 +1,23 @@
 <div  class="row">
     <div class="col-md-6 offset-md-0 col-10 offset-1  mt-4  ">
-        <h2 class="">Agendar Cita</h2>
-        <form class="mt-4" method="POST" action="/appointment/add">
+        <h2 class="">Agendar Reunión</h2>
+        <form class="mt-4" method="POST" action="/meeting/add">
             <div class="form-group">
-                <label for="patient">Paciente</label>
-                <select class="form-control" id="patient" name="patient">
-                    <option disabled selected>Seleccione un paciente</option>
-                    {{#patients}}
+                <label for="contact">Contacto</label>
+                <select class="form-control" id="contact" name="contact">
+                    <option disabled selected>Seleccione un contacto</option>
+                    {{#contacts}}
                         <option id="name" >{{name}}</option>
-                    {{/patients}}
+                    {{/contacts}}
                 </select>
             </div>
             <div class="form-group">
-                <label for="dateAppointment" >Fecha:</label>
-                <input type="date" id="dateAppointment" name="dateAppointment" class="form-control">
+                <label for="dateMeeting" >Fecha:</label>
+                <input type="date" id="dateMeeting" name="dateMeeting" class="form-control">
             </div>
             <div class="form-group ">
-                <label for="timeAppointment">Hora:</label>
-                <input type="time" id="timeAppointment" name="timeAppointment" class="form-control">
+                <label for="timeMeeting">Hora:</label>
+                <input type="time" id="timeMeeting" name="timeMeeting" class="form-control">
             </div>
 
             <div class="form-group ">
@@ -27,7 +27,7 @@
             <div class="form-group row ">
                 <div class="col-md-4 offset-md-4 text-center">
                     <button class="btn btn-success mt-2 mb-4" type="submit">
-                        Crear Cita
+                        Guardar Meeting
                     </button>
                 </div>
             </div>
@@ -35,19 +35,19 @@
     </div>
     <div class="col-md-4 offset-md-1 col-10 offset-1  mt-4">
 
-        {{#if appointments}}
-        <h2 class="">Administra tus Citas</h2>
+        {{#if meetings}}
+        <h2 class="">Administra tus reuniones</h2>
         {{/if}}
-            {{#appointments}}
+            {{#meetings}}
                 <div data-id="{{id}}" class="card border-primary mb-3" style="max-width: 18rem;">
                     <div class="card-body ">
-                        <h5 class="card-title">{{patient}}</h5>
-                        <p class="card-text">Fecha: {{ showAppointmentDate dateAppointment }} </p>
-                        <p class="card-text">Hora: {{timeAppointment}}</p>
+                        <h5 class="card-title">{{contact}}</h5>
+                        <p class="card-text">Fecha: {{ showMeetingDate dateMeeting }} </p>
+                        <p class="card-text">Hora: {{timeMeeting}}</p>
                         <p class="card-text">Descripción: {{description}} </p>
                         <div class="row">
                             <div class="col">
-                                <form action="/appointments/delete/{{_id}}?_method=DELETE" method="POST">
+                                <form action="/meetings/delete/{{_id}}?_method=DELETE" method="POST">
                                     <button type="button" class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal{{id}}">
                                         Eliminar
                                     </button>
@@ -59,7 +59,7 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    Estas seguro que quieres eliminar la cita de {{patient}} ?
+                                                    Estas seguro que quieres eliminar la reunión con {{contact}} ?
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -71,14 +71,14 @@
                                 </form>
                             </div>
                             <div class="col">
-                                <a class="btn btn-info mt-2" href="/appointments/edit/{{_id}}" role="button" > Editar </a>
+                                <a class="btn btn-info mt-2" href="/meetings/edit/{{_id}}" role="button" > Editar </a>
                             </div>
                         </div>
 
                     </div>
                 </div>
 
-            {{/appointments}}
+            {{/meetings}}
     </div>
 
 </div> <!--.row-->

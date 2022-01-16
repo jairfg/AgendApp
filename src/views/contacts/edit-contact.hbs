@@ -1,9 +1,9 @@
-<form action="/patient/edit/{{patient.id}}?_method=PUT" method="POST" enctype="multipart/form-data">
+<form action="/contact/edit/{{contact.id}}?_method=PUT" method="POST" enctype="multipart/form-data">
 
     <div class="row mt-4">
         <div class="col-10 offset-1 col-md-4 offset-md-0 text-center">
-            <img src="/upload/{{patient.nombreArchivo}}"  id="image-field" alt="foto perfil" class="img-thumbnail img-fluid" >
-            <p class="mb-0">Registro:{{timeTransform patient.createdAt}} </p>
+            <img src="/upload/{{contact.nombreArchivo}}"  id="image-field" alt="foto perfil" class="img-thumbnail img-fluid" >
+            <p class="mb-0">Registro:{{timeTransform contact.createdAt}} </p>
             <div class="file-input m-1" >
                 <input
                         type="file"
@@ -37,28 +37,28 @@
             <div class="row">
                 <div class="form-group col-md-6 col-12">
                     <label>Nombre Completo</label>
-                    <input type="text"  name="name" class="form-control" value="{{patient.name}}" >
+                    <input type="text"  name="name" class="form-control" value="{{contact.name}}" >
                 </div>
                 <div class="form-group col-md-6 col-12">
                     <label >DNI</label>
-                    <input type="text" name="nroidentidad" class="form-control" value="{{patient.nroidentidad}}" >
+                    <input type="text" name="nroidentidad" class="form-control" value="{{contact.nroidentidad}}" >
                 </div>
             </div>
             <div class="row">
                 <div class="form-group col-md-6 col-12">
                     <label >Teléfono</label>
-                    <input type="text" name="phone" class="form-control" value="{{patient.phone}}">
+                    <input type="text" name="phone" class="form-control" value="{{contact.phone}}">
                 </div>
                 <div class="form-group col-md-6 col-12">
                     <label >Email</label>
-                    <input type="text" name="email" class="form-control" value="{{patient.email}}" >
+                    <input type="text" name="email" class="form-control" value="{{contact.email}}" >
                 </div>
 
             </div>
             <div class="row">
                 <div class="form-group">
                     <label >Descripción (opcional)</label>
-                    <textarea  class="form-control" name="description" rows="3">{{patient.description}}</textarea>
+                    <textarea  class="form-control" name="description" rows="3">{{contact.description}}</textarea>
                 </div>
             </div>
             <div class="row ">

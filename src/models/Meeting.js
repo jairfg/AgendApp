@@ -1,15 +1,15 @@
 const {Schema , model} =  require('mongoose')
 
-const AppointmentSchema  = new Schema({
-    patient : {
+const MeetingSchema  = new Schema({
+    contact : {
         type:String ,
         required : true
     },
-    timeAppointment : {
+    timeMeeting : {
         type: String,
         required : true
     },
-    dateAppointment : {
+    dateMeeting : {
       type: Date,
       required: true
     },
@@ -25,5 +25,5 @@ const AppointmentSchema  = new Schema({
 })
 
 //nombre del modelo
-module.exports = model('Appointment',AppointmentSchema)
+module.exports = model('Meeting',MeetingSchema)
 

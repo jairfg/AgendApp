@@ -1,6 +1,6 @@
 const {Schema , model} =  require('mongoose')
 
-const PatientSchema  = new Schema({
+const ContactSchema  = new Schema({
     name : {type:String , required: true},
     phone : {
         type: String , required : true 
@@ -25,5 +25,5 @@ const PatientSchema  = new Schema({
 })
 
 //nombre del modelo 
-module.exports = model('Patient',PatientSchema)
+module.exports = model('Contact',ContactSchema);
 

@@ -2,12 +2,12 @@ const nameInput = document.querySelector('#name');
 const dateInput = document.querySelector('#date');
 const timeInput = document.querySelector('#time');
 const descriptionInput = document.querySelector('#description');
-const formCita = document.querySelector('#nueva-cita');
+const formMeeting = document.querySelector('#nuevo-meeting');
 
 
 window.onload = () => {
 
-    const alert = document.querySelector( '[role = "alert"]')
+const alert = document.querySelector( '[role = "alert"]')
     if(alert) {
         setTimeout(()=> {
             alert.remove()

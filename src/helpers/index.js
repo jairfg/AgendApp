@@ -14,14 +14,14 @@ helpers.updateNote = (updatedAt, createdAt)  => {
    }
 }
 
-// para la fecha de las citas listadas
-helpers.showAppointmentDate = dateAppointment => {
-   return moment(dateAppointment).format('LL')
+// para la fecha de los meetings listados
+helpers.showMeetingDate = dateMeeting => {
+   return moment(dateMeeting).format('LL')
 }
 
-// para mostrar la fecha en el form edit cita
-helpers.AppointmentEdit = dateAppointment => {
-   const date = replaceEdit(moment(dateAppointment).format('L'))
+// para mostrar la fecha en el form edit meeting
+helpers.MeetingEdit = dateMeeting => {
+   const date = replaceEdit(moment(dateMeeting).format('L'))
    const list = date.split('-')
    const newlist = list.map( (el ,i,arr) => list[list.length - (i+1)] )
    return newlist.join('-')
