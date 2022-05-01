@@ -3,14 +3,17 @@ const fs = require('fs-extra')
 const contactsController = {}
 const Contact = require('../models/Contact')
 const {aleatorio} = require('../helpers/libs')
+const { uploadFile } = require("../s3");
 
 const nombreAleatorio = async (req,res) => {
     const imgUrl = aleatorio()
     const imagenes = await Contact.find({nombreArchivo : /^imgUrl/ })
     if (imagenes.length > 0){
+        //si existe el nombre volvemos a ejecutar el algoritmo  
         return  nombreAleatorio(req,res)
     }
     const direccion = req.file.path ;
+    //le quita la extension
     const extension = path.extname(req.file.originalname).toLowerCase()
     const direccionFinal = path.resolve(`src/public/upload/${imgUrl}${extension}`)
     if(extension === '.jpg' || extension === '.png' || extension === '.jpeg' || extension === '.gif') {
@@ -30,13 +33,17 @@ contactsController.renderContactForm = async (req, res) => {
 
 contactsController.createContactForm = async (req, res) => {
     if(req.file === undefined){
+        //guardar un usuario sin foto por defecto
         let {name,email,phone,description,nroidentidad }  = req.body
         name = name.trim()
         const newContact = new Contact({name,email,phone,description,nroidentidad,nombreArchivo : 'user.png'})
         newContact.user = req.user.id
         await newContact.save()
     }else{
-        const nombreArchivo = await nombreAleatorio(req,res)
+        //si hay algo en el req.file
+        const result = await uploadFile(req.file);
+        console.log("S3 response", result);
+        const nombreArchivo = await nombreAleatorio(req,res);
         let {name,email,phone,description,nroidentidad }  = req.body
         name = name.trim()
         const newContact = new Contact({name,email,phone,description,nroidentidad,nombreArchivo})
@@ -49,12 +56,10 @@ contactsController.createContactForm = async (req, res) => {
 
 contactsController.renderContacts = async (req, res) => {
     const contacts = await Contact.find({user : req.user.id}).sort({createdAt: 'desc'})
-    console.log(contacts)
     res.render('contacts/all-contacts',{contacts})
 }
 
 contactsController.searchContact = async (req,res) => {
-        console.log(req.query)
         let {contact} = req.query;
         contact = contact.trim()
         const result = await Contact.findOne({name : contact})

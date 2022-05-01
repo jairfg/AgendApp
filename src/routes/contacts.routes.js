@@ -2,6 +2,8 @@ const {Router} = require('express')
 const router = Router()
 const {renderContactForm,createContactForm,renderContacts,renderEditForm,updateContact,deleteContact,searchContact} = require('../controllers/contacts.controller')
 const {isAuthenticated} = require('../helpers/auth')
+
+
 //new Contact
 router.get('/contact/add',isAuthenticated,renderContactForm)
 router.post('/contact/add',isAuthenticated , createContactForm)
