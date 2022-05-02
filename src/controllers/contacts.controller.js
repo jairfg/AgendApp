@@ -5,6 +5,7 @@ const Contact = require('../models/Contact')
 const {aleatorio} = require('../helpers/libs')
 const { uploadFile } = require("../s3");
 
+
 const nombreAleatorio = async (req,res) => {
     const imgUrl = aleatorio()
     const imagenes = await Contact.find({nombreArchivo : /^imgUrl/ })
@@ -16,9 +17,11 @@ const nombreAleatorio = async (req,res) => {
     //le quita la extension
     const extension = path.extname(req.file.originalname).toLowerCase()
     const direccionFinal = path.resolve(`src/public/upload/${imgUrl}${extension}`)
+    req.file.path = direccionFinal;
     if(extension === '.jpg' || extension === '.png' || extension === '.jpeg' || extension === '.gif') {
         await fs.rename(direccion,direccionFinal)
         const nombre = imgUrl + extension;
+        req.file.filename = nombre;
         return nombre
     }else{
         //eliminando archivo que no es imagen
@@ -32,6 +35,7 @@ contactsController.renderContactForm = async (req, res) => {
 }
 
 contactsController.createContactForm = async (req, res) => {
+    console.log(req.file);
     if(req.file === undefined){
         //guardar un usuario sin foto por defecto
         let {name,email,phone,description,nroidentidad }  = req.body
@@ -41,9 +45,10 @@ contactsController.createContactForm = async (req, res) => {
         await newContact.save()
     }else{
         //si hay algo en el req.file
-        const result = await uploadFile(req.file);
-        console.log("S3 response", result);
         const nombreArchivo = await nombreAleatorio(req,res);
+        console.log(req.file);
+        const result = await uploadFile(req.file);  // Calling above function in s3.js
+        console.log("S3 response", result);
         let {name,email,phone,description,nroidentidad }  = req.body
         name = name.trim()
         const newContact = new Contact({name,email,phone,description,nroidentidad,nombreArchivo})

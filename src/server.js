@@ -9,8 +9,6 @@ const session = require('express-session')
 const passport = require('passport')
 const handlebars = require('handlebars');
 
-
-
 const app = express()
 require('./config/passport')
 
@@ -40,7 +38,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash())
-app.use(multer({ dest: path.join(__dirname, '/public/upload/temp') }).single('imagen'));
+app.use(multer({ dest: path.join(__dirname, '/public/upload/temp') }).single('image'));
 // M. para recibir imagenes desde el formulario
 app.use(express.urlencoded({ extended: false }));
 
@@ -59,7 +57,6 @@ app.use(require('./routes/index.routes'))
 app.use(require('./routes/notes.routes'))
 app.use(require('./routes/contacts.routes'))
 app.use(require('./routes/users.routes'))
-
 
 
 // static files

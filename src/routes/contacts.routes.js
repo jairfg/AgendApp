@@ -5,8 +5,8 @@ const {isAuthenticated} = require('../helpers/auth')
 
 
 //new Contact
-router.get('/contact/add',isAuthenticated,renderContactForm)
-router.post('/contact/add',isAuthenticated , createContactForm)
+router.get('/contact/add',isAuthenticated,renderContactForm);
+router.post('/contact/add',isAuthenticated ,createContactForm);
 
 //get all Contact
 router.get('/contacts',isAuthenticated,  renderContacts)
