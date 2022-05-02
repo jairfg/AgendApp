@@ -35,7 +35,6 @@ contactsController.renderContactForm = async (req, res) => {
 }
 
 contactsController.createContactForm = async (req, res) => {
-    console.log(req.file);
     if(req.file === undefined){
         //guardar un usuario sin foto por defecto
         let {name,email,phone,description,nroidentidad }  = req.body
@@ -46,9 +45,7 @@ contactsController.createContactForm = async (req, res) => {
     }else{
         //si hay algo en el req.file
         const nombreArchivo = await nombreAleatorio(req,res);
-        console.log(req.file);
         const result = await uploadFile(req.file);  // Calling above function in s3.js
-        console.log("S3 response", result);
         let {name,email,phone,description,nroidentidad }  = req.body
         name = name.trim()
         const newContact = new Contact({name,email,phone,description,nroidentidad,nombreArchivo})
@@ -97,6 +94,7 @@ contactsController.updateContact = async  (req, res) => {
         await Contact.findByIdAndUpdate(req.params.id, {name,phone,email,description,nroidentidad})
     }else{
         const nombreArchivo = await nombreAleatorio(req,res)
+        const result = await uploadFile(req.file);  // Calling above function in s3.js
         const {name,email,phone,description,nroidentidad }  = req.body
         await Contact.findByIdAndUpdate(req.params.id, {name,phone,email,description,nroidentidad,nombreArchivo})
     }
