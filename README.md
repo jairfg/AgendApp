@@ -1,2 +1,2 @@
 # AgendApp NodeJS MongoDB
-Agenda Personal- guardar notas , contactos y meetings.
+Personal Agenda - saving notes, contacts, and meetings.
